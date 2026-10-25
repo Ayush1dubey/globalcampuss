@@ -1,0 +1,3242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Learn about Global International High School & Jr. College, Bhiwandi — our legacy, vision, mission, values, educational philosophy, student development and commitment to excellence.">
+
+<title>About Us | Global International High School & Jr. College</title>
+
+
+<!-- ================= GOOGLE FONTS ================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+
+<!-- ================= ICONS ================= -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+:root{
+
+    --navy:#0A2540;
+    --blue:#2563EB;
+    --purple:#7C3AED;
+    --teal:#0D9488;
+    --orange:#F59E0B;
+    --pink:#EC4899;
+    --green:#16A34A;
+
+    --dark:#071c30;
+    --text:#475569;
+    --muted:#64748b;
+    --white:#ffffff;
+    --light:#f8fafc;
+    --border:#e2e8f0;
+
+    --shadow:
+    0 15px 45px rgba(15,23,42,.09);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    background:rgba(10,37,64,.97);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.15);
+}
+
+.header-container{
+
+    max-width:1250px;
+    margin:auto;
+
+    padding:15px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:20px;
+}
+
+.brand{
+
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.logo{
+
+    width:54px;
+    height:54px;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(135deg,#ffffff,#dbeafe);
+
+    color:var(--navy);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+    font-weight:900;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.2);
+}
+
+.brand-text h2{
+
+    font-size:17px;
+    line-height:1.3;
+    font-weight:800;
+}
+
+.brand-text span{
+
+    font-size:11px;
+    letter-spacing:1px;
+
+    opacity:.75;
+}
+
+.home-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    padding:9px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.home-btn:hover{
+
+    background:white;
+
+    color:var(--navy);
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:560px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:90px 20px;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(10,37,64,.94),
+        rgba(37,99,235,.88),
+        rgba(124,58,237,.84)
+    ),
+
+    url("global.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+
+/* decorative circles */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:
+    rgba(245,158,11,.18);
+
+    top:-150px;
+    left:-100px;
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+    rgba(236,72,153,.16);
+
+    bottom:-220px;
+    right:-100px;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+
+    animation:heroReveal 1s ease;
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:8px 17px;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(10px);
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+.hero-tag i{
+
+    color:#fbbf24;
+}
+
+.hero h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+    clamp(44px,7vw,78px);
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+
+    background:
+    linear-gradient(
+        90deg,
+        #fbbf24,
+        #f472b6,
+        #67e8f9
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+
+    max-width:780px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    opacity:.91;
+}
+
+.hero-divider{
+
+    width:85px;
+    height:4px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #f59e0b,
+        #ec4899,
+        #22d3ee
+    );
+
+    margin:30px auto 0;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:90px 20px;
+}
+
+.section-label{
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+
+    color:var(--blue);
+
+    margin-bottom:9px;
+}
+
+.section-title{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:
+    0 auto 55px;
+}
+
+.section-title h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:44px;
+
+    line-height:1.2;
+
+    color:var(--navy);
+
+    margin-bottom:14px;
+}
+
+.section-title p{
+
+    color:var(--muted);
+
+    font-size:16px;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.intro{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-bottom:100px;
+}
+
+.intro-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:46px;
+
+    line-height:1.15;
+
+    color:var(--navy);
+
+    margin-bottom:22px;
+}
+
+.intro-content h2 span{
+
+    color:var(--blue);
+}
+
+.intro-content p{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    margin-bottom:17px;
+}
+
+.highlight{
+
+    margin-top:25px;
+
+    padding:21px 22px;
+
+    border-left:
+    5px solid var(--orange);
+
+    border-radius:
+    0 16px 16px 0;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    color:var(--navy);
+
+    font-weight:700;
+}
+
+.highlight i{
+
+    color:var(--orange);
+
+    margin-right:8px;
+}
+
+
+/* image */
+
+.image-wrapper{
+
+    position:relative;
+
+    padding:10px;
+}
+
+.campus-image{
+
+    min-height:480px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        rgba(10,37,64,.05),
+        rgba(10,37,64,.05)
+    ),
+
+    url("global.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:
+    0 25px 60px rgba(15,23,42,.2);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.image-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:25px;
+
+    background:var(--orange);
+
+    top:-15px;
+    left:-15px;
+
+    z-index:-1;
+}
+
+.image-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:25px;
+
+    background:var(--purple);
+
+    bottom:-15px;
+    right:-15px;
+
+    z-index:-1;
+}
+
+.image-badge{
+
+    position:absolute;
+
+    bottom:25px;
+    left:25px;
+    right:25px;
+
+    padding:18px 20px;
+
+    background:
+    rgba(255,255,255,.95);
+
+    border-radius:16px;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.14);
+}
+
+.image-badge strong{
+
+    display:block;
+
+    color:var(--navy);
+
+    font-size:18px;
+}
+
+.image-badge span{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   AT A GLANCE
+===================================================== */
+
+.glance{
+
+    padding:80px 20px;
+
+    background:white;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.glance::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:#dbeafe;
+
+    opacity:.5;
+
+    left:-150px;
+    top:-150px;
+}
+
+.stats{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    position:relative;
+}
+
+.stat{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:#f8fafc;
+
+    border:1px solid var(--border);
+
+    transition:.35s;
+}
+
+.stat:nth-child(1){
+    border-top:4px solid var(--blue);
+}
+
+.stat:nth-child(2){
+    border-top:4px solid var(--purple);
+}
+
+.stat:nth-child(3){
+    border-top:4px solid var(--orange);
+}
+
+.stat:hover{
+
+    transform:
+    translateY(-8px);
+
+    box-shadow:var(--shadow);
+
+    background:white;
+}
+
+.stat i{
+
+    font-size:26px;
+
+    margin-bottom:14px;
+
+    color:var(--blue);
+}
+
+.stat-number{
+
+    font-size:42px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:var(--navy);
+
+    margin-bottom:9px;
+}
+
+.stat-title{
+
+    font-weight:800;
+
+    color:var(--navy);
+
+    font-size:16px;
+}
+
+.stat-text{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   OUR STORY
+===================================================== */
+
+.story{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+
+    align-items:stretch;
+
+    margin-bottom:100px;
+}
+
+.story-card{
+
+    padding:40px;
+
+    border-radius:25px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--navy),
+        var(--blue)
+    );
+
+    box-shadow:var(--shadow);
+}
+
+.story-card h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:38px;
+
+    margin-bottom:18px;
+}
+
+.story-card p{
+
+    opacity:.88;
+
+    font-size:15px;
+}
+
+.story-points{
+
+    display:grid;
+
+    gap:18px;
+}
+
+.story-point{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    box-shadow:
+    0 8px 25px rgba(15,23,42,.05);
+}
+
+.story-icon{
+
+    min-width:48px;
+    height:48px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#eff6ff;
+
+    color:var(--blue);
+
+    font-size:20px;
+}
+
+.story-point h3{
+
+    color:var(--navy);
+
+    font-size:17px;
+
+    margin-bottom:3px;
+}
+
+.story-point p{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   VISION MISSION
+===================================================== */
+
+.vm-section{
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef2ff,
+        #ecfeff,
+        #fff7ed
+    );
+
+    padding:90px 20px;
+}
+
+.vm{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:28px;
+}
+
+.vm-card{
+
+    padding:42px;
+
+    border-radius:25px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.vm-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    right:-35px;
+    top:-35px;
+
+    opacity:.12;
+}
+
+.vision::after{
+    background:var(--blue);
+}
+
+.mission::after{
+    background:var(--purple);
+}
+
+.vm-icon{
+
+    width:62px;
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:25px;
+
+    margin-bottom:20px;
+}
+
+.vision .vm-icon{
+
+    background:#dbeafe;
+    color:var(--blue);
+}
+
+.mission .vm-icon{
+
+    background:#ede9fe;
+    color:var(--purple);
+}
+
+.vm-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    color:var(--navy);
+
+    margin-bottom:12px;
+}
+
+.vm-card p{
+
+    color:var(--text);
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   VALUES
+===================================================== */
+
+.values{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:100px;
+}
+
+.value-card{
+
+    padding:32px 28px;
+
+    border-radius:22px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    box-shadow:
+    0 8px 30px rgba(15,23,42,.05);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.value-card:hover{
+
+    transform:
+    translateY(-9px);
+
+    box-shadow:
+    0 20px 50px rgba(15,23,42,.13);
+}
+
+.value-card:nth-child(1){
+    border-top:4px solid var(--blue);
+}
+
+.value-card:nth-child(2){
+    border-top:4px solid var(--purple);
+}
+
+.value-card:nth-child(3){
+    border-top:4px solid var(--orange);
+}
+
+.value-card:nth-child(4){
+    border-top:4px solid var(--teal);
+}
+
+.value-card:nth-child(5){
+    border-top:4px solid var(--pink);
+}
+
+.value-card:nth-child(6){
+    border-top:4px solid var(--green);
+}
+
+.value-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    font-size:23px;
+}
+
+.value-card:nth-child(1) .value-icon{
+    background:#dbeafe;
+    color:var(--blue);
+}
+
+.value-card:nth-child(2) .value-icon{
+    background:#ede9fe;
+    color:var(--purple);
+}
+
+.value-card:nth-child(3) .value-icon{
+    background:#fef3c7;
+    color:var(--orange);
+}
+
+.value-card:nth-child(4) .value-icon{
+    background:#ccfbf1;
+    color:var(--teal);
+}
+
+.value-card:nth-child(5) .value-icon{
+    background:#fce7f3;
+    color:var(--pink);
+}
+
+.value-card:nth-child(6) .value-icon{
+    background:#dcfce7;
+    color:var(--green);
+}
+
+.value-card h3{
+
+    color:var(--navy);
+
+    font-size:19px;
+
+    margin-bottom:9px;
+}
+
+.value-card p{
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+
+/* =====================================================
+   EDUCATIONAL PHILOSOPHY
+===================================================== */
+
+.philosophy{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--navy),
+        #173f68,
+        var(--purple)
+    );
+
+    color:white;
+
+    padding:70px;
+
+    border-radius:30px;
+
+    margin-bottom:100px;
+
+    box-shadow:
+    0 25px 60px rgba(10,37,64,.2);
+}
+
+.philosophy .section-label{
+
+    color:#fbbf24;
+}
+
+.philosophy h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:43px;
+
+    margin-bottom:18px;
+}
+
+.philosophy > p{
+
+    max-width:850px;
+
+    opacity:.85;
+
+    margin-bottom:42px;
+}
+
+.philosophy-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.philosophy-item{
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,.09);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+}
+
+.philosophy-item i{
+
+    color:#fbbf24;
+
+    font-size:23px;
+
+    margin-bottom:13px;
+}
+
+.philosophy-item h3{
+
+    font-size:17px;
+
+    margin-bottom:7px;
+}
+
+.philosophy-item p{
+
+    font-size:13px;
+
+    opacity:.75;
+}
+
+
+/* =====================================================
+   WHY CHOOSE US
+===================================================== */
+
+.why{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:55px;
+
+    align-items:center;
+
+    margin-bottom:100px;
+}
+
+.why-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:43px;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+}
+
+.why-content > p{
+
+    color:var(--text);
+
+    margin-bottom:25px;
+}
+
+.why-list{
+
+    list-style:none;
+}
+
+.why-list li{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+    margin-bottom:15px;
+
+    color:var(--text);
+
+    font-size:14px;
+}
+
+.why-list i{
+
+    color:var(--green);
+
+    margin-top:5px;
+}
+
+.why-box{
+
+    padding:42px;
+
+    border-radius:26px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff7ed,
+        #fdf2f8
+    );
+
+    border:1px solid #fed7aa;
+
+    box-shadow:var(--shadow);
+}
+
+.why-box h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:31px;
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+}
+
+.why-box p{
+
+    color:var(--text);
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   STUDENT DEVELOPMENT
+===================================================== */
+
+.development-section{
+
+    background:white;
+
+    padding:90px 20px;
+}
+
+.development{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.development-card{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+}
+
+.development-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:var(--shadow);
+}
+
+.development-card i{
+
+    font-size:28px;
+
+    margin-bottom:16px;
+}
+
+.development-card:nth-child(1) i{
+    color:var(--blue);
+}
+
+.development-card:nth-child(2) i{
+    color:var(--purple);
+}
+
+.development-card:nth-child(3) i{
+    color:var(--orange);
+}
+
+.development-card:nth-child(4) i{
+    color:var(--teal);
+}
+
+.development-card h3{
+
+    color:var(--navy);
+
+    font-size:17px;
+
+    margin-bottom:8px;
+}
+
+.development-card p{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   OPPORTUNITIES
+===================================================== */
+
+.opportunities{
+
+    margin-top:100px;
+
+    margin-bottom:100px;
+}
+
+.opportunity-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+.opportunity{
+
+    padding:30px;
+
+    border-radius:22px;
+
+    color:white;
+
+    min-height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    box-shadow:var(--shadow);
+}
+
+.opportunity:nth-child(1){
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+}
+
+.opportunity:nth-child(2){
+
+    background:
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #db2777
+    );
+}
+
+.opportunity:nth-child(3){
+
+    background:
+    linear-gradient(
+        135deg,
+        #0d9488,
+        #059669
+    );
+}
+
+.opportunity i{
+
+    font-size:30px;
+
+    margin-bottom:auto;
+}
+
+.opportunity h3{
+
+    font-size:21px;
+
+    margin-bottom:6px;
+}
+
+.opportunity p{
+
+    font-size:13px;
+
+    opacity:.85;
+}
+
+
+/* =====================================================
+   FACULTY
+===================================================== */
+
+.faculty{
+
+    background:
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        #eef2ff
+    );
+
+    padding:80px 20px;
+
+    margin-bottom:0;
+}
+
+.faculty-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.faculty-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:42px;
+
+    margin-bottom:15px;
+}
+
+.faculty-content p{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    margin-bottom:20px;
+}
+
+
+/* =====================================================
+   ACHIEVEMENTS
+===================================================== */
+
+.achievement-section{
+
+    padding:90px 20px;
+
+    background:white;
+}
+
+.achievement-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+.achievement{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    border:1px solid var(--border);
+
+    background:#f8fafc;
+}
+
+.achievement i{
+
+    font-size:30px;
+
+    color:var(--orange);
+
+    margin-bottom:15px;
+}
+
+.achievement h3{
+
+    color:var(--navy);
+
+    font-size:18px;
+
+    margin-bottom:7px;
+}
+
+.achievement p{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   AFFILIATIONS
+===================================================== */
+
+.affiliation{
+
+    padding:75px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a5f
+    );
+
+    color:white;
+
+    text-align:center;
+}
+
+.affiliation-content{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.affiliation h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:40px;
+
+    margin-bottom:15px;
+}
+
+.affiliation p{
+
+    opacity:.8;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+}
+
+.affiliation-note{
+
+    display:inline-block;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.1);
+
+    border:
+    1px solid rgba(255,255,255,.2);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   COMMITMENT
+===================================================== */
+
+.commitment{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.commitment h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:46px;
+
+    margin-bottom:18px;
+}
+
+.commitment p{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    margin-bottom:28px;
+}
+
+.quote{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 24px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #eff6ff,
+        #f5f3ff,
+        #fff7ed
+    );
+
+    color:var(--blue);
+
+    font-size:17px;
+
+    font-weight:800;
+
+    border:1px solid #dbeafe;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+
+    margin:0 20px 80px;
+
+    border-radius:30px;
+
+    padding:65px 30px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563EB,
+        #7C3AED,
+        #EC4899
+    );
+
+    box-shadow:
+    0 25px 60px rgba(37,99,235,.22);
+}
+
+.cta h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:42px;
+
+    margin-bottom:13px;
+}
+
+.cta p{
+
+    max-width:650px;
+
+    margin:0 auto 25px;
+
+    opacity:.9;
+
+    font-size:15px;
+}
+
+.cta-btn{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:var(--blue);
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.cta-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.2);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#071c30;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+}
+
+footer p{
+
+    font-size:13px;
+
+    opacity:.7;
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes heroReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px){
+
+    .intro,
+    .story,
+    .why{
+
+        grid-template-columns:1fr;
+    }
+
+    .values{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .philosophy-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .development{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .opportunity-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .achievement-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .header-container{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .brand{
+
+        justify-content:center;
+    }
+
+    .hero{
+
+        min-height:500px;
+
+        padding:70px 20px;
+    }
+
+    .hero h1{
+
+        font-size:43px;
+    }
+
+    .hero p{
+
+        font-size:15px;
+    }
+
+    .container{
+
+        padding:
+        65px 18px;
+    }
+
+    .section-title h2{
+
+        font-size:33px;
+    }
+
+    .intro-content h2{
+
+        font-size:34px;
+    }
+
+    .campus-image{
+
+        min-height:350px;
+    }
+
+    .stats,
+    .values,
+    .vm,
+    .philosophy-grid,
+    .development,
+    .opportunity-grid,
+    .achievement-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .philosophy{
+
+        padding:40px 25px;
+    }
+
+    .philosophy h2{
+
+        font-size:33px;
+    }
+
+    .why-content h2{
+
+        font-size:34px;
+    }
+
+    .commitment h2{
+
+        font-size:35px;
+    }
+
+    .cta{
+
+        margin:
+        0 15px 60px;
+
+        padding:
+        50px 20px;
+    }
+
+    .cta h2{
+
+        font-size:32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="header-container">
+
+<div class="brand">
+
+<div class="logo">
+GI
+</div>
+
+<div class="brand-text">
+
+<h2>
+GLOBAL INTERNATIONAL
+</h2>
+
+<span>
+HIGH SCHOOL & JR. COLLEGE
+</span>
+
+</div>
+
+</div>
+
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-arrow-left"></i>
+&nbsp; Back to Home
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+About Our Institution
+
+</div>
+
+
+<h1>
+
+Inspiring Excellence.<br>
+
+<span>Shaping Futures.</span>
+
+</h1>
+
+
+<p>
+
+At Global International High School & Jr. College, Bhiwandi,
+we believe education is the foundation for knowledge,
+character, confidence and a purposeful future.
+
+</p>
+
+
+<div class="hero-divider"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<main class="container">
+
+<section class="intro">
+
+
+<div class="intro-content">
+
+<div class="section-label">
+Who We Are
+</div>
+
+
+<h2>
+
+More Than a School.<br>
+
+<span>A Foundation for the Future.</span>
+
+</h2>
+
+
+<p>
+
+Global International High School & Jr. College, Bhiwandi,
+is committed to providing a meaningful and enriching
+educational experience for students.
+
+</p>
+
+
+<p>
+
+We strive to create a learning environment where students
+are encouraged to ask questions, explore ideas, discover
+their strengths and develop the confidence to pursue
+their aspirations.
+
+</p>
+
+
+<p>
+
+Our approach combines academic learning with values,
+discipline, creativity, communication and opportunities
+for personal growth.
+
+</p>
+
+
+<div class="highlight">
+
+<i class="fa-solid fa-star"></i>
+
+We believe in developing knowledge, character and
+confidence together.
+
+</div>
+
+</div>
+
+
+
+<div class="image-wrapper">
+
+<div class="campus-image"></div>
+
+
+<div class="image-badge">
+
+<strong>
+Global International High School & Jr. College
+</strong>
+
+<span>
+Bhiwandi, Maharashtra • Learning • Growth • Excellence
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR STORY
+===================================================== -->
+
+<section class="story">
+
+
+<div class="story-card">
+
+<div class="section-label" style="color:#fbbf24;">
+Our Journey
+</div>
+
+<h2>
+A Legacy of Learning & Growth
+</h2>
+
+<p>
+
+Our institution continues to focus on building a strong
+educational foundation where students can develop their
+academic abilities, confidence and sense of responsibility.
+
+</p>
+
+<br>
+
+<p>
+
+Through committed educators, supportive learning practices
+and opportunities beyond the classroom, we aim to prepare
+students for higher education, future careers and responsible
+citizenship.
+
+</p>
+
+</div>
+
+
+<div class="story-points">
+
+
+<div class="story-point">
+
+<div class="story-icon">
+
+<i class="fa-solid fa-book-open"></i>
+
+</div>
+
+<div>
+
+<h3>
+Strong Academic Foundation
+</h3>
+
+<p>
+Focus on conceptual understanding and meaningful learning.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="story-point">
+
+<div class="story-icon">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+<div>
+
+<h3>
+Student-Focused Environment
+</h3>
+
+<p>
+A supportive environment that encourages participation and growth.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="story-point">
+
+<div class="story-icon">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+</div>
+
+<div>
+
+<h3>
+Learning Beyond Classrooms
+</h3>
+
+<p>
+Opportunities to explore interests, skills and creativity.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     AT A GLANCE
+===================================================== -->
+
+<section class="glance">
+
+<div class="section-title">
+
+<div class="section-label">
+At a Glance
+</div>
+
+<h2>
+Our Educational Community
+</h2>
+
+<p>
+A growing learning community built around education,
+opportunity and student development.
+</p>
+
+</div>
+
+
+<div class="stats">
+
+
+<div class="stat">
+
+<i class="fa-solid fa-award"></i>
+
+<div class="stat-number">
+15+
+</div>
+
+<div class="stat-title">
+Years of Excellence
+</div>
+
+<div class="stat-text">
+Educational experience and institutional journey
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<div class="stat-number">
+10,000+
+</div>
+
+<div class="stat-title">
+Students
+</div>
+
+<div class="stat-text">
+Learners connected with our educational journey
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<i class="fa-solid fa-chalkboard-user"></i>
+
+<div class="stat-number">
+180+
+</div>
+
+<div class="stat-title">
+Dedicated Faculty
+</div>
+
+<div class="stat-text">
+Educators committed to supporting student learning
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VISION & MISSION
+===================================================== -->
+
+<section class="vm-section">
+
+<div class="section-title">
+
+<div class="section-label">
+Our Direction
+</div>
+
+<h2>
+Vision & Mission
+</h2>
+
+<p>
+The principles that guide our educational journey.
+</p>
+
+</div>
+
+
+<div class="vm">
+
+
+<div class="vm-card vision">
+
+<div class="vm-icon">
+
+<i class="fa-solid fa-eye"></i>
+
+</div>
+
+<h3>
+Our Vision
+</h3>
+
+<p>
+
+To nurture confident, knowledgeable, responsible and
+future-ready individuals who are equipped with the
+skills, values and mindset needed to make a meaningful
+contribution to society.
+
+</p>
+
+</div>
+
+
+<div class="vm-card mission">
+
+<div class="vm-icon">
+
+<i class="fa-solid fa-bullseye"></i>
+
+</div>
+
+<h3>
+Our Mission
+</h3>
+
+<p>
+
+To provide quality education in a supportive and
+inclusive environment that encourages academic
+excellence, character development, creativity,
+discipline and lifelong learning.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CORE VALUES
+===================================================== -->
+
+<main class="container">
+
+<section>
+
+<div class="section-title">
+
+<div class="section-label">
+Our Foundation
+</div>
+
+<h2>
+Core Values That Define Us
+</h2>
+
+<p>
+Our values influence the way we teach, learn,
+communicate and grow together.
+</p>
+
+</div>
+
+
+<div class="values">
+
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h3>
+Academic Excellence
+</h3>
+
+<p>
+Encouraging strong conceptual foundations,
+curiosity and a positive attitude towards learning.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-seedling"></i>
+</div>
+
+<h3>
+Holistic Development
+</h3>
+
+<p>
+Supporting intellectual, social, cultural, emotional
+and personal development.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-scale-balanced"></i>
+</div>
+
+<h3>
+Values & Discipline
+</h3>
+
+<p>
+Building responsibility, integrity, respect,
+discipline and strong character.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+</div>
+
+<h3>
+Creativity & Innovation
+</h3>
+
+<p>
+Encouraging students to think creatively,
+question ideas and explore new possibilities.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-user-check"></i>
+</div>
+
+<h3>
+Student-Centred Learning
+</h3>
+
+<p>
+Recognising individual strengths and helping
+learners discover their potential.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-infinity"></i>
+</div>
+
+<h3>
+Lifelong Learning
+</h3>
+
+<p>
+Inspiring students to remain curious, adaptable
+and committed to continuous learning.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     EDUCATIONAL PHILOSOPHY
+===================================================== -->
+
+<section class="philosophy">
+
+<div class="section-label">
+Our Philosophy
+</div>
+
+<h2>
+Learning With Purpose
+</h2>
+
+<p>
+
+We believe meaningful education should develop both
+competence and character. Our educational philosophy
+encourages students to learn actively, think independently,
+communicate confidently and take responsibility for their growth.
+
+</p>
+
+
+<div class="philosophy-grid">
+
+
+<div class="philosophy-item">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>
+Think
+</h3>
+
+<p>
+Develop curiosity, critical thinking and problem-solving abilities.
+</p>
+
+</div>
+
+
+<div class="philosophy-item">
+
+<i class="fa-solid fa-comments"></i>
+
+<h3>
+Express
+</h3>
+
+<p>
+Build communication skills and confidence to share ideas.
+</p>
+
+</div>
+
+
+<div class="philosophy-item">
+
+<i class="fa-solid fa-rocket"></i>
+
+<h3>
+Grow
+</h3>
+
+<p>
+Develop skills, values and confidence for future opportunities.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="why">
+
+
+<div class="why-content">
+
+<div class="section-label">
+Why Global International
+</div>
+
+<h2>
+An Environment Designed for Growth
+</h2>
+
+<p>
+
+We aim to provide students with an environment where
+learning is purposeful, participation is encouraged and
+individual potential is recognised.
+
+</p>
+
+
+<ul class="why-list">
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Strong academic foundation
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Supportive and disciplined environment
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Focus on communication and confidence
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Co-curricular and extracurricular opportunities
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Development of leadership and teamwork
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Preparation for higher education and future careers
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="why-box">
+
+<h3>
+Education Beyond the Classroom
+</h3>
+
+<p>
+
+The learning journey does not end when the classroom
+door closes. Activities, projects, events, teamwork,
+communication and real-world experiences help students
+discover their interests and develop essential life skills.
+
+</p>
+
+<br>
+
+<p>
+
+Our goal is to help learners become not only academically
+capable, but also confident, responsible and adaptable.
+
+</p>
+
+</div>
+
+</section>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     STUDENT DEVELOPMENT
+===================================================== -->
+
+<section class="development-section">
+
+<div class="section-title">
+
+<div class="section-label">
+Student Development
+</div>
+
+<h2>
+Preparing Students for Tomorrow
+</h2>
+
+<p>
+Education should equip students with knowledge as well as
+the skills and confidence required for a changing world.
+</p>
+
+</div>
+
+
+<div class="development">
+
+
+<div class="development-card">
+
+<i class="fa-solid fa-comments"></i>
+
+<h3>
+Communication
+</h3>
+
+<p>
+Developing clear expression, listening and interpersonal skills.
+</p>
+
+</div>
+
+
+<div class="development-card">
+
+<i class="fa-solid fa-puzzle-piece"></i>
+
+<h3>
+Critical Thinking
+</h3>
+
+<p>
+Encouraging analysis, curiosity and effective problem solving.
+</p>
+
+</div>
+
+
+<div class="development-card">
+
+<i class="fa-solid fa-people-group"></i>
+
+<h3>
+Leadership & Teamwork
+</h3>
+
+<p>
+Building collaboration, responsibility and leadership qualities.
+</p>
+
+</div>
+
+
+<div class="development-card">
+
+<i class="fa-solid fa-heart"></i>
+
+<h3>
+Character & Confidence
+</h3>
+
+<p>
+Nurturing self-belief, values, discipline and responsibility.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OPPORTUNITIES
+===================================================== -->
+
+<main class="container">
+
+<section class="opportunities">
+
+<div class="section-title">
+
+<div class="section-label">
+Beyond Academics
+</div>
+
+<h2>
+Opportunities to Discover & Grow
+</h2>
+
+<p>
+Students should have opportunities to explore their interests,
+express themselves and develop skills beyond textbooks.
+</p>
+
+</div>
+
+
+<div class="opportunity-grid">
+
+
+<div class="opportunity">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>
+Sports & Fitness
+</h3>
+
+<p>
+Encouraging teamwork, discipline, confidence and a healthy lifestyle.
+</p>
+
+</div>
+
+
+<div class="opportunity">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>
+Arts & Creativity
+</h3>
+
+<p>
+Providing space for creativity, imagination and self-expression.
+</p>
+
+</div>
+
+
+<div class="opportunity">
+
+<i class="fa-solid fa-microphone"></i>
+
+<h3>
+Events & Activities
+</h3>
+
+<p>
+Encouraging participation, communication and leadership through activities.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FACULTY
+===================================================== -->
+
+<section class="faculty">
+
+<div class="faculty-content">
+
+<div class="section-label">
+Our Educators
+</div>
+
+<h2>
+Dedicated Faculty. Meaningful Guidance.
+</h2>
+
+<p>
+
+Our educators play an important role in creating a positive
+learning experience. Through guidance, encouragement and
+academic support, they help students understand concepts,
+build confidence and progress towards their goals.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACHIEVEMENTS
+===================================================== -->
+
+<section class="achievement-section">
+
+<div class="section-title">
+
+<div class="section-label">
+Our Achievements
+</div>
+
+<h2>
+Celebrating Progress & Excellence
+</h2>
+
+<p>
+Our journey is strengthened by the achievements,
+participation and growth of our students and educators.
+</p>
+
+</div>
+
+
+<div class="achievement-grid">
+
+
+<div class="achievement">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>
+Academic Achievement
+</h3>
+
+<p>
+Recognising students for dedication, learning and academic performance.
+</p>
+
+</div>
+
+
+<div class="achievement">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>
+Student Participation
+</h3>
+
+<p>
+Encouraging students to participate actively in diverse activities.
+</p>
+
+</div>
+
+
+<div class="achievement">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>
+All-Round Excellence
+</h3>
+
+<p>
+Celebrating growth across academics, activities, skills and character.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AFFILIATIONS
+===================================================== -->
+
+<section class="affiliation">
+
+<div class="affiliation-content">
+
+<div class="section-label" style="color:#fbbf24;">
+Recognition & Affiliation
+</div>
+
+<h2>
+Affiliations & Academic Recognition
+</h2>
+
+<p>
+
+Our academic programmes and institutional information
+are supported by the relevant educational authorities
+and boards applicable to the institution.
+
+</p>
+
+<div class="affiliation-note">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+&nbsp; Official affiliation details can be displayed here
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMITMENT
+===================================================== -->
+
+<section class="commitment">
+
+<div class="section-label">
+Our Promise
+</div>
+
+<h2>
+Our Commitment to Every Student
+</h2>
+
+<p>
+
+We are committed to creating an educational environment
+where every learner receives encouragement, guidance and
+opportunities to grow.
+
+</p>
+
+<p>
+
+Our aim is to help students become knowledgeable,
+confident, responsible and capable individuals who are
+prepared to face the future with purpose.
+
+</p>
+
+
+<div class="quote">
+
+<i class="fa-solid fa-star"></i>
+
+Knowledge • Character • Confidence
+
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+<h2>
+Be Part of the Global Journey
+</h2>
+
+<p>
+
+Discover an educational environment where learning,
+growth and future aspirations come together.
+
+</p>
+
+<a href="index.html" class="cta-btn">
+
+Explore Our Campus
+
+&nbsp;
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</section>
+
+
+<!-- Back to Top Arrow Button -->
+<button id="backToTop" title="Back to Top" aria-label="Back to Top">
+  <i>↑</i>
+</button>
+
+<style>
+#backToTop {
+  position: fixed;
+  right: 22px;
+  bottom: 25px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffb21c, #ff8500);
+  color: #102b48;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(255, 153, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: translateY(-5px);
+  background: #102b48;
+  color: #ffffff;
+}
+</style>
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+  backToTop.style.display =
+    window.scrollY > 300 ? "flex" : "none";
+});
+
+backToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+
+© 2026 Global International High School & Jr. College,
+Bhiwandi. All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+</body>
+
+</html>

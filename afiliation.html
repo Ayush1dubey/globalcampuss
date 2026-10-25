@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Affiliations | Global International High School & Jr. College</title>
+
+<meta name="description" content="Explore the academic affiliations, recognitions and educational connections of Global International High School & Jr. College.">
+<meta name="keywords" content="Global International High School, affiliations, academic recognition, Bhiwandi, education">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =====================================================
+   GLOBAL THEME
+===================================================== */
+
+:root{
+    --orange:#F47B20;
+    --orange-dark:#C95708;
+    --orange-light:#FF9A4A;
+
+    --charcoal:#171717;
+    --charcoal-2:#242424;
+
+    --cream:#FFF9F2;
+    --cream-2:#F7EEE3;
+
+    --gold:#D7A646;
+
+    --white:#ffffff;
+    --text:#292929;
+    --muted:#777;
+
+    --shadow:0 20px 60px rgba(0,0,0,.10);
+    --radius:24px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+    font-family:'DM Serif Display',serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =====================================================
+   PRELOADER
+===================================================== */
+
+#preloader{
+    position:fixed;
+    inset:0;
+    background:var(--charcoal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:99999;
+    transition:.7s ease;
+}
+
+.loader-box{
+    text-align:center;
+}
+
+.loader-logo{
+    width:78px;
+    height:78px;
+    border:2px solid var(--orange);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    color:white;
+    font-weight:800;
+    font-size:25px;
+    box-shadow:0 0 35px rgba(244,123,32,.35);
+}
+
+.loader-box p{
+    color:#ddd;
+    margin-top:18px;
+    letter-spacing:3px;
+    font-size:11px;
+}
+
+.loader-line{
+    width:180px;
+    height:3px;
+    background:#333;
+    margin:18px auto 0;
+    overflow:hidden;
+}
+
+.loader-line span{
+    display:block;
+    height:100%;
+    width:40%;
+    background:var(--orange);
+    animation:loader 1.2s infinite ease-in-out;
+}
+
+@keyframes loader{
+    0%{transform:translateX(-100%)}
+    100%{transform:translateX(350%)}
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    padding:15px 0;
+    background:rgba(23,23,23,.88);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    transition:.4s ease;
+}
+
+.navbar.scrolled{
+    padding:9px 0;
+    box-shadow:0 10px 40px rgba(0,0,0,.18);
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white!important;
+}
+
+.logo-circle{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:800;
+    box-shadow:0 5px 20px rgba(244,123,32,.35);
+}
+
+.brand-text strong{
+    display:block;
+    font-size:15px;
+    letter-spacing:.5px;
+}
+
+.brand-text small{
+    color:#bbb;
+    font-size:10px;
+}
+
+.nav-link{
+    color:#eee!important;
+    font-size:13px;
+    font-weight:600;
+    margin:0 7px;
+    position:relative;
+}
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:var(--orange);
+    transition:.3s ease;
+    transform:translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+    width:70%;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:var(--orange)!important;
+}
+
+.navbar-toggler{
+    border-color:rgba(255,255,255,.3);
+}
+
+.navbar-toggler-icon{
+    filter:invert(1);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        linear-gradient(90deg,
+        rgba(15,15,15,.94) 0%,
+        rgba(15,15,15,.80) 45%,
+        rgba(15,15,15,.35) 100%),
+        url("global.jpeg") center/cover;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    right:-250px;
+    top:-180px;
+    border:1px solid rgba(244,123,32,.35);
+    border-radius:50%;
+    box-shadow:
+        0 0 0 60px rgba(244,123,32,.04),
+        0 0 0 120px rgba(244,123,32,.025);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.hero-label{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--orange-light);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero-label span{
+    width:40px;
+    height:2px;
+    background:var(--orange);
+}
+
+.hero h1{
+    color:white;
+    font-size:clamp(48px,7vw,88px);
+    line-height:1.02;
+    margin-bottom:25px;
+}
+
+.hero h1 em{
+    color:var(--orange);
+    font-style:normal;
+}
+
+.hero p{
+    max-width:680px;
+    color:#ddd;
+    font-size:17px;
+    line-height:1.9;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:white;
+    padding:14px 26px;
+    border-radius:50px;
+    font-weight:700;
+    font-size:13px;
+    border:none;
+    transition:.35s ease;
+}
+
+.btn-orange:hover{
+    background:var(--orange-dark);
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(244,123,32,.28);
+}
+
+.btn-outline-light-custom{
+    border:1px solid rgba(255,255,255,.45);
+    color:white;
+    padding:13px 25px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.btn-outline-light-custom:hover{
+    background:white;
+    color:var(--charcoal);
+}
+
+.hero-seal{
+    position:absolute;
+    right:9%;
+    bottom:12%;
+    width:130px;
+    height:130px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+    font-size:11px;
+    letter-spacing:2px;
+    line-height:1.7;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-seal i{
+    color:var(--orange);
+    display:block;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section{
+    padding:100px 0;
+}
+
+.section-heading{
+    max-width:720px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.section-tag{
+    color:var(--orange-dark);
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    font-size:48px;
+    margin:12px 0 18px;
+}
+
+.section-heading p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* =====================================================
+   TRUST STRIP
+===================================================== */
+
+.trust-strip{
+    background:white;
+    box-shadow:var(--shadow);
+    position:relative;
+    z-index:5;
+    margin-top:-50px;
+    border-radius:22px;
+    padding:28px;
+}
+
+.trust-item{
+    text-align:center;
+    padding:12px;
+}
+
+.trust-item i{
+    color:var(--orange);
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:14px;
+}
+
+.trust-item span{
+    color:#888;
+    font-size:11px;
+}
+
+/* =====================================================
+   AFFILIATION CARDS
+===================================================== */
+
+.affiliation-card{
+    background:white;
+    border-radius:var(--radius);
+    padding:40px 30px;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 45px rgba(0,0,0,.07);
+    border:1px solid rgba(0,0,0,.05);
+    transition:.45s ease;
+}
+
+.affiliation-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,var(--orange),var(--gold));
+}
+
+.affiliation-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 65px rgba(0,0,0,.13);
+}
+
+.card-number{
+    position:absolute;
+    top:20px;
+    right:25px;
+    color:#eee;
+    font-size:50px;
+    font-weight:800;
+}
+
+.card-icon{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    background:#FFF1E5;
+    color:var(--orange);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    margin-bottom:25px;
+    transition:.4s ease;
+}
+
+.affiliation-card:hover .card-icon{
+    transform:rotate(-5deg) scale(1.08);
+    background:var(--orange);
+    color:white;
+}
+
+.card-label{
+    color:var(--orange-dark);
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.affiliation-card h3{
+    font-size:28px;
+    margin:10px 0 15px;
+}
+
+.affiliation-card p{
+    color:#777;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.official-note{
+    margin-top:22px;
+    padding:13px 15px;
+    background:#FFF8F1;
+    border-left:3px solid var(--orange);
+    font-size:12px;
+    color:#666;
+}
+
+/* =====================================================
+   DARK CREDIBILITY SECTION
+===================================================== */
+
+.dark-section{
+    background:var(--charcoal);
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.dark-section::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border:1px solid rgba(244,123,32,.15);
+    right:-180px;
+    top:-180px;
+}
+
+.dark-section .section-tag{
+    color:var(--orange-light);
+}
+
+.dark-section h2{
+    font-size:50px;
+}
+
+.dark-section p{
+    color:#bbb;
+    line-height:1.9;
+}
+
+.credential-box{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+    padding:28px;
+    height:100%;
+    transition:.35s ease;
+}
+
+.credential-box:hover{
+    background:rgba(244,123,32,.08);
+    transform:translateY(-7px);
+    border-color:rgba(244,123,32,.4);
+}
+
+.credential-box i{
+    font-size:27px;
+    color:var(--orange);
+    margin-bottom:18px;
+}
+
+.credential-box h4{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.credential-box p{
+    font-size:13px;
+}
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline{
+    position:relative;
+    max-width:850px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#eadfd3;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:20px 45px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    margin-left:50%;
+}
+
+.timeline-dot{
+    position:absolute;
+    width:14px;
+    height:14px;
+    background:var(--orange);
+    border-radius:50%;
+    top:30px;
+    right:-7px;
+    box-shadow:0 0 0 7px #FFF0E4;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-7px;
+}
+
+.timeline-item h4{
+    font-size:23px;
+}
+
+.timeline-item p{
+    color:#777;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats-section{
+    background:var(--cream-2);
+}
+
+.stat-box{
+    text-align:center;
+    padding:25px;
+}
+
+.stat-box i{
+    color:var(--orange);
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.counter{
+    font-size:42px;
+    font-weight:800;
+    color:var(--charcoal);
+}
+
+.stat-box p{
+    color:#777;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+/* =====================================================
+   ECOSYSTEM
+===================================================== */
+
+.eco-card{
+    padding:35px;
+    border-radius:22px;
+    background:white;
+    height:100%;
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+    transition:.4s ease;
+}
+
+.eco-card:hover{
+    transform:translateY(-8px);
+}
+
+.eco-icon{
+    color:var(--orange);
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.eco-card h3{
+    font-size:25px;
+}
+
+.eco-card p{
+    color:#777;
+    font-size:13px;
+    line-height:1.8;
+}
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    padding:90px 0;
+    background:
+        linear-gradient(135deg,
+        rgba(244,123,32,.96),
+        rgba(201,87,8,.96));
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.cta::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:50%;
+    right:-120px;
+    top:-160px;
+}
+
+.cta h2{
+    font-size:52px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:15px auto 30px;
+    color:rgba(255,255,255,.88);
+}
+
+.btn-white{
+    background:white;
+    color:var(--orange-dark);
+    border-radius:50px;
+    padding:14px 30px;
+    font-size:13px;
+    font-weight:800;
+    transition:.3s ease;
+}
+
+.btn-white:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    color:var(--orange-dark);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#111;
+    color:#aaa;
+    padding:65px 0 25px;
+}
+
+.footer-logo{
+    color:white;
+    font-size:22px;
+    font-weight:800;
+}
+
+.footer-logo span{
+    color:var(--orange);
+}
+
+footer p{
+    font-size:13px;
+    line-height:1.8;
+}
+
+footer h5{
+    color:white;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:9px;
+}
+
+.footer-links a{
+    color:#999;
+    font-size:12px;
+    transition:.3s ease;
+}
+
+.footer-links a:hover{
+    color:var(--orange);
+}
+
+.footer-bottom{
+    border-top:1px solid #292929;
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:11px;
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    background:var(--orange);
+    color:white;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    box-shadow:0 10px 25px rgba(244,123,32,.35);
+}
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:1s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:991px){
+
+    .navbar-collapse{
+        background:#171717;
+        margin-top:15px;
+        padding:15px;
+        border-radius:15px;
+    }
+
+    .hero{
+        min-height:850px;
+    }
+
+    .hero-seal{
+        display:none;
+    }
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+        width:100%;
+        margin-left:0;
+        padding-left:40px;
+        text-align:left;
+    }
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:3px;
+        right:auto;
+    }
+}
+
+@media(max-width:576px){
+
+    .section{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        font-size:47px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section-heading h2{
+        font-size:38px;
+    }
+
+    .dark-section h2,
+    .cta h2{
+        font-size:38px;
+    }
+
+    .trust-strip{
+        margin-top:-30px;
+        padding:18px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     PRELOADER
+===================================================== -->
+
+<div id="preloader">
+    <div class="loader-box">
+
+        <div class="loader-logo">
+            GI
+        </div>
+
+        <p>GLOBAL INTERNATIONAL</p>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+
+<div class="logo-circle">
+GI
+</div>
+
+<div class="brand-text">
+<strong>GLOBAL INTERNATIONAL</strong>
+<small>HIGH SCHOOL & JR. COLLEGE</small>
+</div>
+
+</a>
+
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#mainNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<div class="collapse navbar-collapse" id="mainNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#academics">Academics</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#facilities">Facilities</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#campus">Campus Life</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="achievements.html">Achievements</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="affiliations.html">Affiliations</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<div class="hero-label">
+<span></span>
+Academic Affiliations
+</div>
+
+<h1>
+Connected Through
+<br>
+<span>Academic Excellence.</span>
+</h1>
+
+<p>
+Our academic affiliations and institutional connections reflect
+our commitment to structured education, academic responsibility
+and a strong foundation for every learner.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#affiliations" class="btn-orange">
+Explore Affiliations
+<i class="fa-solid fa-arrow-down ms-2"></i>
+</a>
+
+<a href="index.html" class="btn-outline-light-custom">
+Back to Home
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-seal">
+
+<div>
+<i class="fa-solid fa-award"></i>
+TRUST<br>
+ACADEMIC<br>
+EXCELLENCE
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     TRUST STRIP
+===================================================== -->
+
+<div class="container">
+
+<div class="trust-strip reveal">
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<div class="trust-item">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<strong>Academic Recognition</strong>
+
+<span>Structured Educational Framework</span>
+
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="trust-item">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<strong>Academic Responsibility</strong>
+
+<span>Committed to Educational Standards</span>
+
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="trust-item">
+
+<i class="fa-solid fa-link"></i>
+
+<strong>Educational Connections</strong>
+
+<span>Building a Strong Academic Ecosystem</span>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     AFFILIATIONS
+===================================================== -->
+
+<section class="section" id="affiliations">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div class="section-tag">
+Our Affiliations
+</div>
+
+<h2>
+A Foundation of
+Academic Trust
+</h2>
+
+<p>
+Our institutional affiliations form an important part of our
+academic framework, supporting a structured and responsible
+learning environment.
+</p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<!-- CARD 1 -->
+
+<div class="col-lg-4 reveal">
+
+<div class="affiliation-card">
+
+<div class="card-number">01</div>
+
+<div class="card-icon">
+<i class="fa-solid fa-school"></i>
+</div>
+
+<div class="card-label">
+School Education
+</div>
+
+<h3>
+Recognised School Board
+</h3>
+
+<p>
+Our school education follows the applicable academic framework
+and standards prescribed by the relevant recognised educational
+authority.
+</p>
+
+<div class="official-note">
+
+<i class="fa-solid fa-circle-info me-2"></i>
+
+Official board details can be displayed here once verified.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="col-lg-4 reveal">
+
+<div class="affiliation-card">
+
+<div class="card-number">02</div>
+
+<div class="card-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<div class="card-label">
+Higher Education
+</div>
+
+<h3>
+University Affiliation
+</h3>
+
+<p>
+Our higher education programmes operate within the applicable
+university and regulatory framework, supporting academic
+progression and recognised learning.
+</p>
+
+<div class="official-note">
+
+<i class="fa-solid fa-circle-info me-2"></i>
+
+Official university details can be displayed here once verified.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="col-lg-4 reveal">
+
+<div class="affiliation-card">
+
+<div class="card-number">03</div>
+
+<div class="card-icon">
+<i class="fa-solid fa-certificate"></i>
+</div>
+
+<div class="card-label">
+Academic Standards
+</div>
+
+<h3>
+Academic Recognition
+</h3>
+
+<p>
+We remain committed to maintaining academic practices that
+support quality education, institutional responsibility and
+student development.
+</p>
+
+<div class="official-note">
+
+<i class="fa-solid fa-circle-info me-2"></i>
+
+Recognition details should be published only after official verification.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CREDIBILITY
+===================================================== -->
+
+<section class="section dark-section">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6 reveal">
+
+<div class="section-tag">
+Why Affiliations Matter
+</div>
+
+<h2>
+Trust Built Through
+Academic Responsibility
+</h2>
+
+<p>
+Affiliations provide an important academic framework for
+institutions and learners. They help establish clarity,
+accountability and structured educational pathways.
+</p>
+
+<p>
+At Global International, our focus remains on creating an
+environment where students can learn, develop confidence and
+prepare themselves for future opportunities.
+</p>
+
+</div>
+
+
+<div class="col-lg-6">
+
+<div class="row g-3">
+
+<div class="col-md-6 reveal">
+
+<div class="credential-box">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h4>Structured Learning</h4>
+
+<p>
+Academic programmes supported by a structured educational framework.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6 reveal">
+
+<div class="credential-box">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h4>Student Focus</h4>
+
+<p>
+Education designed around academic and personal development.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6 reveal">
+
+<div class="credential-box">
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+<h4>Responsibility</h4>
+
+<p>
+A commitment to responsible and transparent academic practices.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6 reveal">
+
+<div class="credential-box">
+
+<i class="fa-solid fa-arrow-up-right-dots"></i>
+
+<h4>Progress</h4>
+
+<p>
+Creating pathways that encourage continuous growth and learning.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ACADEMIC JOURNEY
+===================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div class="section-tag">
+Academic Journey
+</div>
+
+<h2>
+Growing With Purpose
+</h2>
+
+<p>
+Our educational approach brings together foundational learning,
+academic development and preparation for future opportunities.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<h4>Foundation</h4>
+
+<p>
+Building strong academic fundamentals, discipline and curiosity
+from the early stages of education.
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<h4>Development</h4>
+
+<p>
+Encouraging students to develop knowledge, confidence,
+communication and practical understanding.
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<h4>Exploration</h4>
+
+<p>
+Creating opportunities for students to discover their interests,
+strengths and future academic possibilities.
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<h4>Future Readiness</h4>
+
+<p>
+Preparing learners with the mindset and skills required for
+higher education, careers and responsible citizenship.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="section stats-section">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div class="section-tag">
+At A Glance
+</div>
+
+<h2>
+A Growing Educational Community
+</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+<div class="col-md-4 reveal">
+
+<div class="stat-box">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<div class="counter" data-target="15">0</div>
+
+<p>YEARS OF EXCELLENCE</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4 reveal">
+
+<div class="stat-box">
+
+<i class="fa-solid fa-users"></i>
+
+<div class="counter" data-target="10000">0</div>
+
+<p>STUDENTS & LEARNERS</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4 reveal">
+
+<div class="stat-box">
+
+<i class="fa-solid fa-chalkboard-user"></i>
+
+<div class="counter" data-target="180">0</div>
+
+<p>DEDICATED FACULTY</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     EDUCATIONAL ECOSYSTEM
+===================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div class="section-tag">
+Our Educational Ecosystem
+</div>
+
+<h2>
+Learn. Explore. Grow. Lead.
+</h2>
+
+<p>
+Education extends beyond textbooks. We aim to develop learners
+who are academically capable, confident and prepared for the future.
+</p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="eco-card">
+
+<div class="eco-icon">
+<i class="fa-solid fa-book"></i>
+</div>
+
+<h3>Learn</h3>
+
+<p>
+Build strong academic foundations through meaningful learning
+experiences.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="eco-card">
+
+<div class="eco-icon">
+<i class="fa-solid fa-lightbulb"></i>
+</div>
+
+<h3>Explore</h3>
+
+<p>
+Encourage curiosity, creativity and exploration beyond the classroom.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="eco-card">
+
+<div class="eco-icon">
+<i class="fa-solid fa-seedling"></i>
+</div>
+
+<h3>Grow</h3>
+
+<p>
+Develop confidence, communication, discipline and personal responsibility.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="eco-card">
+
+<div class="eco-icon">
+<i class="fa-solid fa-compass"></i>
+</div>
+
+<h3>Lead</h3>
+
+<p>
+Prepare students to become responsible and future-ready individuals.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta text-center">
+
+<div class="container reveal">
+
+<div class="section-tag text-white">
+Global International
+</div>
+
+<h2>
+A Foundation Built on Trust.
+</h2>
+
+<p>
+Discover an educational environment where academic responsibility,
+student development and future-focused learning come together.
+</p>
+
+<a href="index.html#contact" class="btn-white">
+Connect With Us
+<i class="fa-solid fa-arrow-right ms-2"></i>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="row g-5">
+
+<div class="col-lg-5">
+
+<div class="footer-logo">
+GLOBAL <span>INTERNATIONAL</span>
+</div>
+
+<p class="mt-3">
+High School & Jr. College committed to meaningful education,
+student development and preparation for a changing future.
+</p>
+
+<p>
+<i class="fa-solid fa-location-dot me-2"></i>
+Bhiwandi, Maharashtra, India
+</p>
+
+</div>
+
+
+<div class="col-md-3 col-lg-2">
+
+<h5>QUICK LINKS</h5>
+
+<ul class="footer-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a href="affiliations.html">Affiliations</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="col-md-4 col-lg-3">
+
+<h5>ACADEMIC</h5>
+
+<ul class="footer-links">
+
+<li><a href="index.html#academics">Academics</a></li>
+<li><a href="index.html#facilities">Facilities</a></li>
+<li><a href="index.html#campus">Campus Life</a></li>
+<li><a href="index.html#contact">Admissions & Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-2">
+
+<h5>FOLLOW</h5>
+
+<div class="d-flex gap-3">
+
+<a href="#" class="text-white">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="#" class="text-white">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="#" class="text-white">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Global International High School & Jr. College.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* =====================================================
+   PRELOADER
+===================================================== */
+
+window.addEventListener("load",function(){
+
+setTimeout(function(){
+
+document.getElementById("preloader").style.opacity="0";
+
+setTimeout(function(){
+document.getElementById("preloader").style.display="none";
+},700);
+
+},500);
+
+});
+
+
+/* =====================================================
+   NAVBAR SCROLL
+===================================================== */
+
+window.addEventListener("scroll",function(){
+
+const navbar=document.querySelector(".navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("scrolled");
+}else{
+navbar.classList.remove("scrolled");
+}
+
+});
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const reveals=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.12
+});
+
+reveals.forEach(el=>observer.observe(el));
+
+
+/* =====================================================
+   COUNTERS
+===================================================== */
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+const target=parseInt(counter.dataset.target);
+
+let current=0;
+const duration=1800;
+const increment=target/(duration/16);
+
+const update=()=>{
+
+current+=increment;
+
+if(current<target){
+
+counter.textContent=Math.floor(current).toLocaleString();
+requestAnimationFrame(update);
+
+}else{
+
+counter.textContent=target.toLocaleString();
+
+}
+
+};
+
+update();
+
+counterObserver.unobserve(counter);
+
+}
+
+});
+
+},{
+threshold:.5
+});
+
+counters.forEach(counter=>counterObserver.observe(counter));
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>500){
+
+topBtn.style.display="flex";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.addEventListener("click",function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+
+/* =====================================================
+   MOBILE NAV CLOSE
+===================================================== */
+
+document.querySelectorAll(".navbar .nav-link").forEach(link=>{
+
+link.addEventListener("click",function(){
+
+const menu=document.querySelector(".navbar-collapse");
+
+if(menu.classList.contains("show")){
+
+new bootstrap.Collapse(menu).hide();
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

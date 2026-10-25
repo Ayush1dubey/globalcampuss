@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Management's Message - Global International High School & Jr. College, Bhiwandi">
+
+<title>Management's Message | Global International</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+
+<!-- DAY / NIGHT MODE BUTTON -->
+<button id="themeToggle" class="theme-toggle" type="button">
+  <span id="themeIcon" class="theme-icon">☀️</span>
+  <span id="themeLabel">Day Mode</span>
+</button>
+
+<style>
+.theme-toggle {
+  position: fixed;
+  right: 22px;
+  bottom: 155px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 125px;
+  padding: 12px 16px;
+  border: 1px solid #f47b20;
+  border-radius: 30px;
+  background: #fff;
+  color: #252525;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(0,0,0,.15);
+  transition: .25s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-3px);
+}
+
+.theme-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* NIGHT MODE */
+body.night-mode {
+  background: #15171c !important;
+  color: #f4f4f4 !important;
+}
+
+body.night-mode header,
+body.night-mode nav,
+body.night-mode .message,
+body.night-mode .card,
+body.night-mode .photo-label {
+  background-color: #22252b !important;
+  color: #f4f4f4 !important;
+}
+
+body.night-mode .hero,
+body.night-mode .soft {
+  background: #191c22 !important;
+  color: #f4f4f4 !important;
+}
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode p,
+body.night-mode .brand,
+body.night-mode .links a {
+  color: #f0f0f0;
+}
+
+body.night-mode .theme-toggle {
+  background: #292d35;
+  color: #fff;
+  border-color: #777;
+}
+
+@media(max-width:600px) {
+  .theme-toggle {
+    right: 15px;
+    bottom: 140px;
+    min-width: 115px;
+    padding: 10px 13px;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const button = document.getElementById("themeToggle");
+  const icon = document.getElementById("themeIcon");
+  const label = document.getElementById("themeLabel");
+
+  if (!button || !icon || !label) return;
+
+  function updateTheme(isNight) {
+    document.body.classList.toggle("night-mode", isNight);
+    icon.textContent = isNight ? "🌙" : "☀️";
+    label.textContent = isNight ? "Night Mode" : "Day Mode";
+    button.setAttribute(
+      "aria-label",
+      isNight ? "Switch to day mode" : "Switch to night mode"
+    );
+  }
+
+  button.addEventListener("click", function () {
+    updateTheme(!document.body.classList.contains("night-mode"));
+  });
+
+  updateTheme(false);
+})();
+</script>
+
+
+
+<style>
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+    --navy:#071c32;
+    --navy-2:#0b2947;
+    --navy-3:#123858;
+
+    --gold:#e9a928;
+    --gold-light:#f5c45c;
+
+    --blue:#2563eb;
+
+    --white:#ffffff;
+    --light:#f7f9fc;
+    --muted:#667085;
+    --border:#e5eaf0;
+
+    --shadow:0 25px 70px rgba(7,28,50,.12);
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.top-header{
+    height:78px;
+
+    background:rgba(7,28,50,.97);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    position:relative;
+    z-index:100;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.brand-mark{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+
+    color:var(--navy);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:17px;
+    font-weight:800;
+
+    box-shadow:0 8px 25px rgba(233,169,40,.25);
+}
+
+.brand-text strong{
+    display:block;
+
+    color:white;
+
+    font-size:14px;
+    letter-spacing:1.2px;
+}
+
+.brand-text span{
+    display:block;
+
+    color:#aebdcd;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+}
+
+.home-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 19px;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.home-btn:hover{
+    background:var(--gold);
+
+    color:var(--navy);
+
+    border-color:var(--gold);
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:500px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        100deg,
+        rgba(5,20,36,.98) 0%,
+        rgba(7,28,50,.94) 48%,
+        rgba(7,28,50,.76) 100%
+    ),
+    url("global.jpeg") center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border:1px solid rgba(233,169,40,.22);
+
+    border-radius:50%;
+
+    right:-230px;
+    top:-180px;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    left:-180px;
+    bottom:-190px;
+}
+
+.hero-content{
+    position:relative;
+
+    z-index:3;
+
+    padding:80px 0;
+}
+
+.hero-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    color:var(--gold);
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+.hero-kicker::before{
+    content:"";
+
+    width:34px;
+    height:2px;
+
+    background:var(--gold);
+}
+
+.hero h1{
+    max-width:850px;
+
+    margin:20px 0;
+
+    color:white;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(44px,6vw,72px);
+
+    line-height:1.08;
+
+    font-weight:600;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-description{
+    max-width:690px;
+
+    color:#cbd6e3;
+
+    font-size:17px;
+}
+
+.hero-meta{
+    margin-top:32px;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.hero-line{
+    width:55px;
+    height:1px;
+
+    background:var(--gold);
+}
+
+.hero-meta span{
+    color:#aebdcd;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+    padding:90px 0 55px;
+
+    text-align:center;
+}
+
+.section-kicker{
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.intro h2{
+    margin:13px 0 16px;
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(32px,4vw,46px);
+
+    line-height:1.2;
+}
+
+.intro p{
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   MANAGEMENT PROFILE
+========================================================= */
+
+.management{
+    padding:35px 0 110px;
+}
+
+.profile{
+    display:grid;
+
+    grid-template-columns:430px 1fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   PREMIUM PHOTO DESIGN
+========================================================= */
+
+.photo-wrapper{
+    position:relative;
+
+    padding:22px 22px 35px 22px;
+}
+
+.photo-wrapper::before{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    border-left:3px solid var(--gold);
+    border-top:3px solid var(--gold);
+
+    top:0;
+    left:0;
+
+    z-index:1;
+}
+
+.photo-wrapper::after{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    border-right:3px solid var(--gold);
+    border-bottom:3px solid var(--gold);
+
+    right:0;
+    bottom:10px;
+
+    z-index:1;
+}
+
+.photo-card{
+    position:relative;
+
+    z-index:2;
+
+    min-height:560px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf1f5,
+            #dce3ea
+        );
+
+    border:8px solid white;
+
+    box-shadow:
+        0 30px 70px rgba(7,28,50,.18);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/*
+   IMPORTANT:
+   contain keeps the complete portrait visible.
+   It prevents head/shoulder cropping.
+*/
+
+.photo-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center center;
+
+    display:block;
+
+    background:#eef2f5;
+}
+
+
+/* Photo bottom identity */
+
+.photo-info{
+    position:absolute;
+
+    left:8px;
+    right:8px;
+    bottom:8px;
+
+    padding:22px 24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(7,28,50,.15),
+            rgba(7,28,50,.97)
+        );
+
+    color:white;
+
+    z-index:4;
+}
+
+.photo-info small{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:4px;
+}
+
+.photo-info h3{
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    font-weight:600;
+
+    line-height:1.2;
+}
+
+.photo-info p{
+    color:#d5deea;
+
+    font-size:12px;
+
+    margin-top:4px;
+}
+
+
+/* Floating number */
+
+.photo-number{
+    position:absolute;
+
+    top:42px;
+    right:-18px;
+
+    z-index:5;
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+
+/* =========================================================
+   MESSAGE AREA
+========================================================= */
+
+.message{
+    position:relative;
+}
+
+.message-kicker{
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.message h2{
+    margin:13px 0 25px;
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(35px,4vw,52px);
+
+    line-height:1.15;
+}
+
+.message h2 span{
+    display:block;
+
+    color:var(--blue);
+}
+
+.message p{
+    color:#5d6878;
+
+    font-size:15px;
+
+    margin-bottom:17px;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-box{
+    position:relative;
+
+    margin:32px 0;
+
+    padding:28px 32px;
+
+    background:#f1f5f9;
+
+    border-radius:0 18px 18px 0;
+
+    border-left:4px solid var(--gold);
+}
+
+.quote-mark{
+    position:absolute;
+
+    top:-15px;
+    left:22px;
+
+    font-family:Georgia,serif;
+
+    font-size:58px;
+
+    color:var(--gold);
+
+    line-height:1;
+}
+
+.quote-box p{
+    margin:0;
+
+    padding-top:12px;
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:20px;
+
+    line-height:1.55;
+
+    font-style:italic;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature{
+    display:flex;
+
+    align-items:center;
+
+    gap:17px;
+
+    margin-top:30px;
+
+    padding-top:25px;
+
+    border-top:1px solid var(--border);
+}
+
+.signature-line{
+    width:45px;
+    height:2px;
+
+    background:var(--gold);
+}
+
+.signature strong{
+    display:block;
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:20px;
+}
+
+.signature span{
+    display:block;
+
+    color:#7b8491;
+
+    font-size:12px;
+
+    margin-top:2px;
+}
+
+
+/* =========================================================
+   LEADERSHIP VALUES
+========================================================= */
+
+.values{
+    position:relative;
+
+    padding:100px 0;
+
+    background:var(--navy);
+
+    color:white;
+
+    overflow:hidden;
+}
+
+.values::before{
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    border:1px solid rgba(233,169,40,.12);
+
+    border-radius:50%;
+
+    right:-330px;
+    top:-250px;
+}
+
+.values-heading{
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.values-heading small{
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.values-heading h2{
+    margin:12px 0;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:44px;
+}
+
+.values-heading p{
+    max-width:700px;
+
+    margin:auto;
+
+    color:#bdcad7;
+
+    font-size:14px;
+}
+
+.values-grid{
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.value-card{
+    padding:35px 30px;
+
+    min-height:245px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:rgba(255,255,255,.045);
+
+    border-radius:18px;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.value-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:70px;
+    height:70px;
+
+    border:1px solid rgba(233,169,40,.25);
+
+    border-radius:50%;
+
+    right:-25px;
+    bottom:-25px;
+}
+
+.value-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(233,169,40,.45);
+
+    background:rgba(255,255,255,.075);
+}
+
+.value-number{
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+}
+
+.value-card h3{
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.value-card p{
+    color:#bac7d5;
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   COMMITMENT
+========================================================= */
+
+.commitment{
+    padding:105px 0;
+}
+
+.commitment-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+.commitment-label{
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.commitment h2{
+    margin:13px 0 20px;
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:43px;
+
+    line-height:1.2;
+}
+
+.commitment-intro{
+    color:var(--muted);
+
+    font-size:15px;
+
+    margin-bottom:28px;
+}
+
+.commitment-list{
+    display:grid;
+
+    gap:14px;
+}
+
+.commitment-item{
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    padding:19px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    box-shadow:0 8px 30px rgba(7,28,50,.045);
+
+    transition:.3s;
+}
+
+.commitment-item:hover{
+    transform:translateX(5px);
+
+    border-color:#d7e0ea;
+}
+
+.check{
+    min-width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    color:var(--blue);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:14px;
+
+    font-weight:800;
+}
+
+.commitment-item h3{
+    color:var(--navy);
+
+    font-size:15px;
+
+    margin-bottom:2px;
+}
+
+.commitment-item p{
+    color:#7a8492;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.statement{
+    padding:100px 20px;
+
+    position:relative;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(7,28,50,.94),
+        rgba(7,28,50,.96)
+    ),
+    url("global.jpeg") center/cover;
+}
+
+.statement small{
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.statement h2{
+    max-width:850px;
+
+    margin:13px auto 18px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(34px,5vw,52px);
+
+    line-height:1.2;
+}
+
+.statement p{
+    max-width:730px;
+
+    margin:auto;
+
+    color:#cbd6e3;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:28px 15px;
+
+    background:#041424;
+
+    color:#9aaaba;
+
+    text-align:center;
+
+    font-size:12px;
+}
+
+footer strong{
+    color:#d8e1eb;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+    .profile{
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .photo-wrapper{
+        width:min(470px,100%);
+
+        margin:auto;
+    }
+
+    .commitment-grid{
+        grid-template-columns:1fr;
+
+        gap:50px;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .top-header{
+        height:70px;
+
+        padding:0 5%;
+    }
+
+    .brand-text{
+        display:none;
+    }
+
+    .brand-mark{
+        width:42px;
+        height:42px;
+    }
+
+    .home-btn{
+        padding:9px 14px;
+
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero-content{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+    .intro{
+        padding:70px 0 35px;
+    }
+
+    .management{
+        padding:25px 0 75px;
+    }
+
+    .photo-wrapper{
+        padding:15px 15px 30px;
+    }
+
+    .photo-card{
+        min-height:440px;
+
+        border-width:6px;
+    }
+
+    .photo-number{
+        right:-5px;
+
+        width:52px;
+        height:52px;
+    }
+
+    .photo-info{
+        left:6px;
+        right:6px;
+        bottom:6px;
+
+        padding:18px;
+    }
+
+    .photo-info h3{
+        font-size:21px;
+    }
+
+    .message h2{
+        font-size:36px;
+    }
+
+    .quote-box{
+        padding:25px 22px;
+    }
+
+    .quote-box p{
+        font-size:18px;
+    }
+
+    .values{
+        padding:75px 0;
+    }
+
+    .values-heading h2{
+        font-size:34px;
+    }
+
+    .commitment{
+        padding:75px 0;
+    }
+
+    .commitment h2{
+        font-size:34px;
+    }
+
+    .statement{
+        padding:75px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+    }
+
+    .reveal{
+        opacity:1;
+
+        transform:none;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-header">
+
+    <a href="index.html" class="brand">
+
+        <div class="brand-mark">
+            GI
+        </div>
+
+        <div class="brand-text">
+
+            <strong>
+                GLOBAL INTERNATIONAL
+            </strong>
+
+            <span>
+                HIGH SCHOOL & JR. COLLEGE
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <a href="index.html" class="home-btn">
+        ← Back to Home
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content reveal">
+
+            <div class="hero-kicker">
+                Leadership • Vision • Excellence
+            </div>
+
+            <h1>
+                A Message from the
+                <span>Management</span>
+            </h1>
+
+            <p class="hero-description">
+                Leadership that believes in meaningful education,
+                strong values and creating opportunities for every
+                student to discover their potential.
+            </p>
+
+            <div class="hero-meta">
+
+                <div class="hero-line"></div>
+
+                <span>
+                    Global International High School & Jr. College
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="intro">
+
+    <div class="container reveal">
+
+        <div class="section-kicker">
+            Our Leadership
+        </div>
+
+        <h2>
+            Education With Purpose
+        </h2>
+
+        <p>
+            At Global International High School & Jr. College,
+            our leadership is committed to building an environment
+            where academic excellence, character and confidence
+            grow together.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MANAGEMENT PROFILE
+===================================================== -->
+
+<section class="management">
+
+    <div class="container">
+
+        <div class="profile">
+
+
+            <!-- ================= PHOTO ================= -->
+
+            <div class="photo-wrapper reveal">
+
+                <div class="photo-number">
+                    MD
+                </div>
+
+                <div class="photo-card">
+
+                    <!--
+                        IMPORTANT:
+                        Keep the image name as management.jpg
+
+                        object-fit: contain is used so that
+                        the complete portrait remains visible.
+                    -->
+
+                    <img
+                        src="management.jpg"
+                        alt="Adv. Pankaj Mishra, Managing Director of Global International High School & Jr. College"
+                    >
+
+
+                    <div class="photo-info">
+
+                        <small>
+                            Institutional Leadership
+                        </small>
+
+                        <h3>
+                            Adv. Pankaj Mishra
+                        </h3>
+
+                        <p>
+                            Managing Director
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= MESSAGE ================= -->
+
+            <div class="message reveal">
+
+                <div class="message-kicker">
+                    Management's Message
+                </div>
+
+                <h2>
+                    Building Foundations.
+                    <span>Creating Futures.</span>
+                </h2>
+
+
+                <p>
+                    At Global International High School & Jr. College,
+                    we believe that education is far more than the
+                    transfer of knowledge. It is the foundation upon
+                    which young individuals build their character,
+                    confidence, aspirations and future.
+                </p>
+
+
+                <p>
+                    Our constant endeavour is to provide an environment
+                    where students are encouraged to learn with curiosity,
+                    think independently and develop the confidence to
+                    face the challenges of an ever-changing world.
+                </p>
+
+
+                <p>
+                    We are committed to nurturing academic excellence
+                    while giving equal importance to discipline, values,
+                    creativity, leadership and responsible citizenship.
+                    Every student has unique potential, and education
+                    should provide the right environment for that
+                    potential to flourish.
+                </p>
+
+
+                <div class="quote-box">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <p>
+                        The true measure of education is not only
+                        what a student learns, but the person
+                        they become.
+                    </p>
+
+                </div>
+
+
+                <p>
+                    With the collective efforts of our dedicated
+                    educators, staff, parents and students, we look
+                    forward to building an institution that continues
+                    to inspire excellence, encourage innovation and
+                    make a meaningful contribution to society.
+                </p>
+
+
+                <div class="signature">
+
+                    <div class="signature-line"></div>
+
+                    <div>
+
+                        <strong>
+                            Adv. Pankaj Mishra
+                        </strong>
+
+                        <span>
+                            Managing Director • Global International
+                            High School & Jr. College
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LEADERSHIP VALUES
+===================================================== -->
+
+<section class="values">
+
+    <div class="container">
+
+        <div class="values-heading reveal">
+
+            <small>
+                Our Leadership Commitment
+            </small>
+
+            <h2>
+                What We Stand For
+            </h2>
+
+            <p>
+                Our approach to education is guided by principles
+                that place students, learning and their future
+                at the centre of everything we do.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value-card reveal">
+
+                <div class="value-number">
+                    01 — EXCELLENCE
+                </div>
+
+                <h3>
+                    Quality Education
+                </h3>
+
+                <p>
+                    We continuously strive to strengthen academic
+                    standards and create meaningful learning
+                    experiences for every student.
+                </p>
+
+            </div>
+
+
+            <div class="value-card reveal">
+
+                <div class="value-number">
+                    02 — DEVELOPMENT
+                </div>
+
+                <h3>
+                    Holistic Growth
+                </h3>
+
+                <p>
+                    We encourage students to grow academically,
+                    personally, socially and through meaningful
+                    co-curricular experiences.
+                </p>
+
+            </div>
+
+
+            <div class="value-card reveal">
+
+                <div class="value-number">
+                    03 — VALUES
+                </div>
+
+                <h3>
+                    Character & Integrity
+                </h3>
+
+                <p>
+                    Strong values, discipline, responsibility and
+                    integrity remain essential parts of meaningful
+                    education.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- =====================================================
+     COMMITMENT
+===================================================== -->
+
+<section class="commitment">
+
+    <div class="container">
+
+        <div class="commitment-grid">
+
+
+            <div class="reveal">
+
+                <div class="commitment-label">
+                    Our Commitment to Students
+                </div>
+
+                <h2>
+                    Preparing Young Minds for a Changing World
+                </h2>
+
+                <p class="commitment-intro">
+                    The world is constantly evolving, and education
+                    must evolve with it. Our responsibility is to
+                    equip students with strong foundations, adaptable
+                    skills and the confidence to embrace the future.
+                </p>
+
+            </div>
+
+
+            <div class="commitment-list">
+
+
+                <div class="commitment-item reveal">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Academic Foundation
+                        </h3>
+
+                        <p>
+                            Developing strong knowledge,
+                            curiosity and learning skills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="commitment-item reveal">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Confidence & Leadership
+                        </h3>
+
+                        <p>
+                            Encouraging students to take initiative,
+                            communicate and lead.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="commitment-item reveal">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Responsible Citizenship
+                        </h3>
+
+                        <p>
+                            Inspiring respect, responsibility and
+                            awareness towards society.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="commitment-item reveal">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Future Readiness
+                        </h3>
+
+                        <p>
+                            Preparing learners to confidently
+                            respond to a changing world.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- WhatsApp Button -->
+<a class="float-whatsapp"
+   id="floatingWhatsApp"
+   href="#"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Admission Inquiry on WhatsApp"
+   title="Admission Inquiry on WhatsApp">
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor"
+      d="M16 3.2A12.3 12.3 0 0 0 5.5 21.9L4 28l6.3-1.6A12.3 12.3 0 1 0 16 3.2Zm0 22.4c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.3-.5a10 10 0 1 1 8.4 4.7Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+  </svg>
+</a>
+
+<!-- Back to Top Arrow -->
+<button class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top"
+        title="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="m5 14 7-7 7 7M12 7v12"/>
+  </svg>
+</button>
+
+<style>
+.float-whatsapp,
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  z-index: 9999;
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(0,0,0,.20);
+  transition: transform .25s, opacity .25s, background .25s;
+}
+
+.float-whatsapp {
+  bottom: 24px;
+  background: #20c568;
+  color: white;
+  text-decoration: none;
+}
+
+.float-whatsapp svg {
+  width: 32px;
+  height: 32px;
+}
+
+.back-to-top {
+  bottom: 90px;
+  background: #f47b20;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.back-to-top svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.float-whatsapp:hover,
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media(max-width:600px) {
+  .float-whatsapp,
+  .back-to-top {
+    right: 15px;
+    width: 49px;
+    height: 49px;
+  }
+
+  .float-whatsapp { bottom: 18px; }
+  .back-to-top { bottom: 79px; }
+}
+</style>
+
+<script>
+(function () {
+  const message =
+    "Hello Sir, I am interested in admission at Global International High School Engineering College. Kindly share the admission process, eligibility criteria, fee structure, required documents, and other admission details. Thank you.";
+
+  const whatsappURL =
+    "https://wa.me/918976521508?text=" +
+    encodeURIComponent(message);
+
+  const whatsappButton =
+    document.getElementById("floatingWhatsApp");
+
+  const topButton =
+    document.getElementById("backToTop");
+
+  if (whatsappButton) {
+    whatsappButton.href = whatsappURL;
+  }
+
+  function updateArrow() {
+    if (topButton) {
+      topButton.classList.toggle(
+        "show",
+        window.scrollY > 250
+      );
+    }
+  }
+
+  if (topButton) {
+    topButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+
+  window.addEventListener("scroll", updateArrow, {
+    passive: true
+  });
+
+  updateArrow();
+})();
+</script>
+
+
+
+
+<!-- =====================================================
+     CLOSING STATEMENT
+===================================================== -->
+
+<section class="statement">
+
+    <div class="container reveal">
+
+        <small>
+            Our Promise
+        </small>
+
+        <h2>
+            Inspiring Excellence.
+            Shaping Futures.
+        </h2>
+
+        <p>
+            Together, we remain committed to building an institution
+            where every student receives the opportunity to discover
+            their potential, pursue excellence and prepare confidently
+            for the future.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    © 2026
+    <strong>
+        Global International High School & Jr. College
+    </strong>,
+    Bhiwandi. All Rights Reserved.
+
+</footer>
+
+
+
+<!-- =====================================================
+     SCROLL REVEAL JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const revealObserver =
+new IntersectionObserver(
+
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:0.12
+    }
+
+);
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

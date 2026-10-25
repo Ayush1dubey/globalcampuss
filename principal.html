@@ -1,0 +1,3266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leadership | Global International</title>
+
+<!-- =====================================================
+     BOOTSTRAP
+===================================================== -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+<!-- =====================================================
+     AOS
+===================================================== -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+      rel="stylesheet">
+
+<!-- =====================================================
+     FONT AWESOME
+===================================================== -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+
+    --navy:#0A2540;
+    --navy2:#102F4D;
+    --orange:#F59E0B;
+    --orange-dark:#D97706;
+
+    --white:#ffffff;
+    --light:#F8FAFC;
+    --light2:#F1F5F9;
+
+    --text:#111827;
+    --muted:#64748B;
+
+    --border:#E2E8F0;
+
+    --shadow:
+    0 20px 60px rgba(10,37,64,.10);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.main-navbar{
+
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(226,232,240,.8);
+
+    box-shadow:
+    0 8px 30px rgba(10,37,64,.06);
+
+}
+
+
+/* Brand */
+
+.navbar-brand{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:var(--navy)!important;
+
+    font-weight:800;
+
+    font-size:18px;
+
+    letter-spacing:-.3px;
+}
+
+.logo-circle{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:white;
+
+    font-weight:800;
+
+    position:relative;
+}
+
+.logo-circle::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    background:var(--orange);
+
+    border-radius:50%;
+
+    right:-2px;
+    top:2px;
+
+}
+
+
+/* Nav links */
+
+.navbar-nav{
+    gap:8px;
+}
+
+.nav-link{
+
+    position:relative;
+
+    color:#1F2937!important;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    padding:25px 15px!important;
+
+    transition:.3s ease;
+
+}
+
+.nav-link:hover{
+    color:var(--orange)!important;
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+    right:15px;
+
+    bottom:14px;
+
+    height:2px;
+
+    background:var(--orange);
+
+    transform:scaleX(0);
+
+    transform-origin:center;
+
+    transition:.35s ease;
+
+}
+
+.nav-link:hover::after{
+    transform:scaleX(1);
+}
+
+
+/* Active */
+
+.nav-link.active{
+    color:var(--orange)!important;
+}
+
+.nav-link.active::after{
+    transform:scaleX(1);
+}
+
+
+/* Mobile */
+
+.navbar-toggler{
+
+    border:1px solid var(--border);
+
+    padding:8px 10px;
+}
+
+.navbar-toggler:focus{
+    box-shadow:0 0 0 3px rgba(245,158,11,.15);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.leadership-hero{
+
+    position:relative;
+
+    min-height:520px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(245,158,11,.18),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #071D32,
+        #0A2540 60%,
+        #102F4D
+    );
+
+}
+
+
+/* Background decoration */
+
+.hero-orb{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(245,158,11,.20);
+
+    pointer-events:none;
+
+}
+
+.hero-orb.one{
+
+    width:430px;
+    height:430px;
+
+    right:-160px;
+    top:-180px;
+
+    animation:
+    floating 8s ease-in-out infinite;
+}
+
+.hero-orb.two{
+
+    width:260px;
+    height:260px;
+
+    left:-130px;
+    bottom:-140px;
+
+    animation:
+    floating 10s ease-in-out infinite reverse;
+}
+
+@keyframes floating{
+
+    0%,100%{
+        transform:translateY(0) rotate(0);
+    }
+
+    50%{
+        transform:translateY(-20px) rotate(8deg);
+    }
+
+}
+
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+
+    max-width:850px;
+
+    color:white;
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--orange);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+}
+
+.hero-tag::before{
+
+    content:"";
+
+    width:40px;
+    height:2px;
+
+    background:var(--orange);
+}
+
+.hero-content h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:22px;
+}
+
+.hero-content h1 span{
+    color:var(--orange);
+}
+
+.hero-content p{
+
+    max-width:690px;
+
+    color:rgba(255,255,255,.72);
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+}
+
+
+/* Hero button */
+
+.home-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:13px 22px;
+
+    border-radius:50px;
+
+    background:var(--orange);
+
+    color:var(--navy);
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    transition:.35s ease;
+
+}
+
+.home-btn:hover{
+
+    background:white;
+
+    color:var(--navy);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.20);
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.section{
+
+    padding:110px 0;
+}
+
+.section.white{
+    background:white;
+}
+
+.section.light{
+    background:var(--light);
+}
+
+.section-heading{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+}
+
+.section-tag{
+
+    color:var(--orange);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:15px;
+}
+
+.section-tag::before,
+.section-tag::after{
+
+    content:"";
+
+    width:32px;
+    height:2px;
+
+    background:var(--orange);
+}
+
+.section-heading h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--navy);
+
+    font-size:45px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+}
+
+.section-heading h2 span{
+    color:var(--orange);
+}
+
+.section-heading p{
+
+    color:var(--muted);
+
+    font-size:15px;
+
+    line-height:1.85;
+
+    max-width:650px;
+
+    margin:auto;
+}
+
+
+/* =====================================================
+   CHAIRMAN
+===================================================== */
+
+.chairman-wrap{
+
+    position:relative;
+
+    background:
+
+    radial-gradient(
+        circle at 0% 0%,
+        rgba(245,158,11,.09),
+        transparent 30%
+    ),
+
+    var(--light);
+
+    overflow:hidden;
+}
+
+.chairman-card{
+
+    display:grid;
+
+    grid-template-columns:390px 1fr;
+
+    gap:55px;
+
+    align-items:center;
+
+    padding:32px;
+
+    background:rgba(255,255,255,.88);
+
+    border:1px solid rgba(226,232,240,.9);
+
+    border-radius:32px;
+
+    box-shadow:
+    0 30px 80px rgba(10,37,64,.11);
+
+    backdrop-filter:blur(20px);
+
+    transition:.5s ease;
+
+}
+
+.chairman-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 40px 90px rgba(10,37,64,.15);
+}
+
+
+/* Chairman photo */
+
+.chairman-photo{
+
+    position:relative;
+
+    height:470px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:var(--light2);
+}
+
+.chairman-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+}
+
+.chairman-card:hover
+.chairman-photo img{
+
+    transform:scale(1.05);
+}
+
+
+/* Photo overlay */
+
+.chairman-photo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(10,37,64,.65),
+        transparent 45%
+    );
+}
+
+
+/* Chairman badge */
+
+.chairman-badge{
+
+    position:absolute;
+
+    z-index:2;
+
+    left:20px;
+    bottom:20px;
+
+    padding:13px 18px;
+
+    border-radius:15px;
+
+    background:rgba(10,37,64,.94);
+
+    color:white;
+
+    backdrop-filter:blur(12px);
+}
+
+.chairman-badge strong{
+
+    display:block;
+
+    font-size:17px;
+}
+
+.chairman-badge span{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:#CBD5E1;
+
+    font-size:10px;
+}
+
+
+/* Chairman content */
+
+.message-label{
+
+    color:var(--orange);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.chairman-content h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--navy);
+
+    font-size:38px;
+
+    line-height:1.25;
+
+    margin:14px 0 22px;
+
+}
+
+.chairman-content p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+}
+
+.signature{
+
+    margin-top:28px;
+
+    padding-left:18px;
+
+    border-left:4px solid var(--orange);
+}
+
+.signature strong{
+
+    display:block;
+
+    color:var(--navy);
+
+    font-size:16px;
+}
+
+.signature span{
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+/* =====================================================
+   MAIN PRINCIPAL
+===================================================== */
+
+.principal-highlight{
+
+    position:relative;
+
+    background:white;
+
+    overflow:hidden;
+}
+
+.principal-main-card{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #F8FAFC,
+        #FFFFFF
+    );
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:.5s ease;
+}
+
+.principal-main-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 35px 80px rgba(10,37,64,.13);
+}
+
+.principal-main-photo{
+
+    height:390px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    position:relative;
+
+    background:var(--light2);
+}
+
+.principal-main-photo img{
+
+    height:100%;
+
+    width:100%;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+}
+
+.principal-main-card:hover
+.principal-main-photo img{
+    transform:scale(1.06);
+}
+
+.main-badge{
+
+    position:absolute;
+
+    bottom:15px;
+    left:15px;
+
+    background:var(--orange);
+
+    color:var(--navy);
+
+    padding:9px 14px;
+
+    border-radius:30px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+}
+
+.main-label{
+
+    color:var(--orange);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.principal-main-content h3{
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:38px;
+
+    margin:12px 0;
+}
+
+.principal-main-content h4{
+
+    color:var(--orange-dark);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+.principal-main-content p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    max-width:700px;
+}
+
+
+/* Principal information */
+
+.info-pills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:25px;
+}
+
+.info-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:9px 14px;
+
+    border-radius:30px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    color:var(--navy);
+
+    font-size:10px;
+
+    font-weight:700;
+}
+
+.info-pill i{
+    color:var(--orange);
+}
+
+
+/* =====================================================
+   LEADERSHIP GRID
+===================================================== */
+
+.team-section{
+
+    background:var(--light);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+}
+
+
+/* Team card */
+
+.team-card{
+
+    position:relative;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:27px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 45px rgba(10,37,64,.07);
+
+    transition:.5s ease;
+}
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:
+    rgba(245,158,11,.45);
+
+    box-shadow:
+    0 30px 70px rgba(10,37,64,.13);
+}
+
+
+/* Image */
+
+.team-photo{
+
+    position:relative;
+
+    height:320px;
+
+    overflow:hidden;
+
+    background:var(--light2);
+}
+
+.team-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+}
+
+.team-card:hover
+.team-photo img{
+    transform:scale(1.08);
+}
+
+
+/* Image badge */
+
+.team-badge{
+
+    position:absolute;
+
+    left:16px;
+    bottom:16px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:9px 14px;
+
+    background:rgba(10,37,64,.94);
+
+    color:white;
+
+    border-radius:30px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    backdrop-filter:blur(10px);
+}
+
+.team-badge i{
+    color:var(--orange);
+}
+
+
+/* Team content */
+
+.team-content{
+
+    padding:27px;
+}
+
+.team-section-name{
+
+    color:var(--orange);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1.8px;
+}
+
+.team-content h3{
+
+    color:var(--navy);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    margin:8px 0 5px;
+}
+
+.team-designation{
+
+    color:var(--orange-dark);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    display:block;
+
+    margin-bottom:15px;
+}
+
+.team-content p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+.team-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+}
+
+.team-tags span{
+
+    padding:7px 11px;
+
+    border-radius:30px;
+
+    border:1px solid var(--border);
+
+    color:var(--navy);
+
+    font-size:9px;
+
+    font-weight:700;
+
+}
+
+.team-tags i{
+
+    color:var(--orange);
+
+    margin-right:4px;
+}
+
+
+/* =====================================================
+   LEADERSHIP PHILOSOPHY
+===================================================== */
+
+.philosophy{
+
+    background:var(--navy);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.philosophy::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border:1px solid rgba(245,158,11,.18);
+
+    border-radius:50%;
+
+    left:-200px;
+    top:-200px;
+}
+
+.philosophy::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    border-radius:50%;
+
+    right:-250px;
+    bottom:-250px;
+}
+
+.philosophy-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+}
+
+.quote-icon{
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    background:var(--orange);
+
+    color:var(--navy);
+
+    font-size:20px;
+
+    animation:pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        box-shadow:
+        0 0 0 0 rgba(245,158,11,.35);
+    }
+
+    50%{
+        box-shadow:
+        0 0 0 16px rgba(245,158,11,0);
+    }
+
+}
+
+.philosophy h2{
+
+    color:white;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:38px;
+
+    margin-bottom:18px;
+}
+
+.philosophy p{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    max-width:680px;
+
+    margin:auto;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    background:#071B2D;
+
+    color:white;
+
+    padding:35px 0;
+
+    text-align:center;
+}
+
+.footer p{
+
+    color:rgba(255,255,255,.60);
+
+    margin:0;
+
+    font-size:12px;
+}
+
+.footer span{
+    color:var(--orange);
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-top{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--orange);
+
+    color:var(--navy);
+
+    text-decoration:none;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.18);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s ease;
+
+    z-index:999;
+}
+
+.back-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:991px){
+
+    .navbar-nav{
+        padding:15px 0;
+    }
+
+    .nav-link{
+        padding:12px 5px!important;
+    }
+
+    .nav-link::after{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:50px;
+    }
+
+    .chairman-card{
+        grid-template-columns:1fr;
+    }
+
+    .principal-main-card{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:767px){
+
+    .section{
+        padding:80px 0;
+    }
+
+    .leadership-hero{
+        min-height:480px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .section-heading{
+        margin-bottom:50px;
+    }
+
+    .section-heading h2{
+        font-size:31px;
+    }
+
+    .chairman-card{
+        padding:17px;
+        gap:25px;
+        border-radius:24px;
+    }
+
+    .chairman-photo{
+        height:370px;
+    }
+
+    .chairman-content{
+        padding:5px;
+    }
+
+    .chairman-content h3{
+        font-size:28px;
+    }
+
+    .principal-main-card{
+        padding:17px;
+        gap:25px;
+    }
+
+    .principal-main-photo{
+        height:340px;
+    }
+
+    .principal-main-content{
+        padding:5px;
+    }
+
+    .principal-main-content h3{
+        font-size:29px;
+    }
+
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+
+    .team-photo{
+        height:330px;
+    }
+
+    .philosophy h2{
+        font-size:28px;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .navbar-brand{
+        font-size:14px;
+    }
+
+    .logo-circle{
+        width:36px;
+        height:36px;
+    }
+
+    .hero-content h1{
+        font-size:33px;
+    }
+
+    .chairman-photo{
+        height:320px;
+    }
+
+    .principal-main-photo{
+        height:300px;
+    }
+
+    .team-photo{
+        height:300px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+
+<nav class="navbar navbar-expand-lg main-navbar">
+
+<div class="container">
+
+    <!-- BRAND -->
+
+    <a class="navbar-brand" href="index.html">
+
+        <div class="logo-circle">
+            GI
+        </div>
+
+  
+            <strong>
+                GLOBAL INTERNATIONAL HIGH SCHOOL & JR.COLLEGE
+            </strong>
+
+
+        </div>
+
+    </a>
+
+
+
+
+
+
+
+    <!-- MOBILE TOGGLE -->
+
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="collapse navbar-collapse"
+         id="mainNav">
+
+        <ul class="navbar-nav ms-auto">
+
+
+            <!-- HOME -->
+
+            <li class="nav-item">
+
+                <a class="nav-link"
+                   href="index.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+
+            <!-- ABOUT -->
+
+            <li class="nav-item">
+
+                <a class="nav-link active"
+                   href="index.html#about">
+
+                    About
+
+                </a>
+
+            </li>
+
+
+            <!-- ACADEMICS -->
+
+            <li class="nav-item">
+
+                <a class="nav-link"
+                   href="index.html#academics">
+
+                    Academics
+
+                </a>
+
+            </li>
+
+
+            <!-- FACILITIES -->
+
+            <li class="nav-item">
+
+                <a class="nav-link"
+                   href="index.html#facilities">
+
+                    Facilities
+
+                </a>
+
+            </li>
+
+
+            <!-- GALLERY -->
+
+            <li class="nav-item">
+
+                <a class="nav-link"
+                   href="index.html#gallery">
+
+                    Gallery
+
+                </a>
+
+            </li>
+
+
+            <!-- ADMISSION -->
+
+            <li class="nav-item">
+
+                <a class="nav-link"
+                   href="index.html#admission">
+
+                    Admission
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li class="nav-item">
+
+                <a class="nav-link"
+                   href="index.html#contact">
+
+                    Contact
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="leadership-hero">
+
+<div class="hero-orb one"></div>
+<div class="hero-orb two"></div>
+
+<div class="container">
+
+<div class="hero-content"
+     data-aos="fade-up"
+     data-aos-duration="1000">
+
+    <div class="hero-tag">
+
+        LEADERSHIP & VISION
+
+    </div>
+
+    <h1>
+
+        Leadership That
+        <span>Inspires.</span>
+
+    </h1>
+
+    <p>
+
+        Meet the academic and institutional leaders who guide
+        Global International with vision, dedication and a
+        commitment to excellence in education.
+
+    </p>
+
+
+   <a href="index.html" class="home-btn">
+    <i class="fas fa-arrow-left"></i>
+    Back to Home
+</a>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a id="floatingWhatsApp"
+   class="floating-whatsapp"
+   href="#"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp Admission Inquiry"
+   title="Admission Inquiry on WhatsApp">
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor"
+      d="M16 3a12.8 12.8 0 0 0-11 19.3L3.3 29l6.9-1.8A12.8 12.8 0 1 0 16 3Zm0 23.3a10.4 10.4 0 0 1-5.3-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.5A10.4 10.4 0 1 1 16 26.3Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+  </svg>
+</a>
+
+<!-- BACK TO TOP ARROW -->
+<button id="backToTop"
+        class="floating-top"
+        type="button"
+        aria-label="Back to top"
+        title="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="m5 14 7-7 7 7M12 7v12"/>
+  </svg>
+</button>
+
+<style>
+.floating-whatsapp,
+.floating-top {
+  position: fixed;
+  right: 22px;
+  z-index: 99999;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,.2);
+  transition: transform .25s, opacity .25s;
+}
+
+.floating-whatsapp {
+  bottom: 22px;
+  background: #20c568;
+  color: #fff;
+  text-decoration: none;
+}
+
+.floating-whatsapp svg {
+  width: 32px;
+  height: 32px;
+}
+
+.floating-top {
+  bottom: 88px;
+  background: #f47b20;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+}
+
+.floating-top svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.floating-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-whatsapp:hover,
+.floating-top:hover {
+  transform: translateY(-4px);
+}
+
+@media(max-width:600px) {
+  .floating-whatsapp,
+  .floating-top {
+    right: 15px;
+    width: 49px;
+    height: 49px;
+  }
+
+  .floating-whatsapp { bottom: 18px; }
+  .floating-top { bottom: 79px; }
+}
+</style>
+
+<script>
+(function () {
+  const message =
+    "Hello Sir,\n\n" +
+    "My name is [Your Name], and I am interested in taking " +
+    "admission at Global International High School & Junior College.\n\n" +
+    "Could you please guide me through the admission process " +
+    "and share the eligibility criteria, available classes, " +
+    "fee structure, required documents, admission dates, " +
+    "and any other important details?\n\n" +
+    "I would appreciate it if you could provide me with complete " +
+    "information to help me proceed with the admission process.\n\n" +
+    "Thank you for your time and guidance.\n\n" +
+    "Regards,\n[Your Name]";
+
+  const whatsapp = document.getElementById("floatingWhatsApp");
+  const topButton = document.getElementById("backToTop");
+
+  if (whatsapp) {
+    whatsapp.href =
+      "https://wa.me/918976521508?text=" +
+      encodeURIComponent(message);
+  }
+
+  function updateArrow() {
+    if (topButton) {
+      topButton.classList.toggle("visible", window.scrollY > 250);
+    }
+  }
+
+  if (topButton) {
+    topButton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  window.addEventListener("scroll", updateArrow, { passive: true });
+  updateArrow();
+})();
+</script>
+
+
+<!-- =====================================================
+     CHAIRMAN
+===================================================== -->
+
+<section class="section chairman-wrap"
+         id="chairman">
+
+<div class="container">
+
+
+<div class="section-heading"
+     data-aos="fade-up">
+
+    <div class="section-tag">
+        LEADERSHIP & VISION
+    </div>
+
+    <h2>
+
+        Chairman's
+        <span>Message</span>
+
+    </h2>
+
+    <p>
+
+        A vision built on excellence, values and a commitment
+        to shaping a brighter future for every learner.
+
+    </p>
+
+</div>
+
+
+
+<div class="chairman-card"
+     data-aos="fade-up"
+     data-aos-duration="1200">
+
+
+    <!-- PHOTO -->
+
+    <div class="chairman-photo">
+
+        <img src="chairman.jpeg"
+             alt="Chairman">
+
+        <div class="chairman-badge">
+
+            <strong>
+                Chairman
+            </strong>
+
+            <span>
+                Global Campus Coordination
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- MESSAGE -->
+
+    <div class="chairman-content">
+
+        <span class="message-label">
+
+            MESSAGE FROM THE CHAIRMAN
+
+        </span>
+
+        <h3>
+
+            Building Character,
+            Creating Opportunities,
+            Shaping the Future
+
+        </h3>
+
+
+        <p>
+
+            Education is not only about academic achievement;
+            it is about developing responsible, confident and
+            compassionate individuals who are prepared to
+            contribute meaningfully to society.
+
+        </p>
+
+
+        <p>
+
+            At Global Campus Coordination, our commitment is to
+            create an environment where every learner is encouraged
+            to discover their potential, develop strong values and
+            pursue excellence with confidence.
+
+        </p>
+
+
+        <p>
+
+            With dedicated educators, progressive learning practices
+            and a strong focus on holistic development, we continue
+            to work towards building a meaningful and successful
+            future for every student.
+
+        </p>
+
+
+        <div class="signature">
+
+            <strong>
+                Chairman
+            </strong>
+
+            <span>
+                Global Campus Coordination
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN PRINCIPAL
+===================================================== -->
+
+<section class="section principal-highlight"
+         id="principal">
+
+<div class="container">
+
+
+<div class="section-heading"
+     data-aos="fade-up">
+
+    <div class="section-tag">
+        INSTITUTIONAL LEADERSHIP
+    </div>
+
+    <h2>
+
+        Principal's
+        <span>Message</span>
+
+    </h2>
+
+    <p>
+
+        Academic leadership dedicated to nurturing excellence,
+        discipline, confidence and holistic development.
+
+    </p>
+
+</div>
+
+
+
+<div class="principal-main-card"
+     data-aos="fade-up"
+     data-aos-duration="1100">
+
+
+    <!-- PHOTO -->
+
+    <div class="principal-main-photo">
+
+        <img src="principal.jpg"
+             alt="Principal">
+
+        <div class="main-badge">
+
+            <i class="fas fa-award"></i>
+
+            PRINCIPAL
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="principal-main-content">
+
+        <span class="main-label">
+
+            PRINCIPAL
+            •
+            GLOBAL INTERNATIONAL
+
+        </span>
+
+        <h3>
+            Principal's Message
+        </h3>
+
+        <h4>
+            Guiding Young Minds Towards Excellence
+        </h4>
+
+        <p>
+
+            At Global International, we believe that every student
+            has the potential to achieve meaningful success. Our
+            responsibility is to provide the right environment,
+            guidance and opportunities for students to discover
+            their strengths and grow with confidence.
+
+        </p>
+
+        <p>
+
+            We focus on academic excellence while giving equal
+            importance to discipline, character, creativity,
+            leadership and responsible citizenship.
+
+        </p>
+
+
+        <div class="info-pills">
+
+            <span class="info-pill">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                Academic Excellence
+
+            </span>
+
+            <span class="info-pill">
+
+                <i class="fas fa-heart"></i>
+
+                Holistic Development
+
+            </span>
+
+            <span class="info-pill">
+
+                <i class="fas fa-users"></i>
+
+                Student-Centred Learning
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACADEMIC LEADERSHIP
+===================================================== -->
+
+<section class="section team-section"
+         id="academic-leadership">
+
+<div class="container">
+
+
+<div class="section-heading"
+     data-aos="fade-up">
+
+    <div class="section-tag">
+        ACADEMIC LEADERSHIP
+    </div>
+
+    <h2>
+
+        Our Academic
+        <span>Leadership</span>
+
+    </h2>
+
+    <p>
+
+        Dedicated leaders guiding every stage of the educational
+        journey with care, discipline and excellence.
+
+    </p>
+
+</div>
+
+
+
+<div class="team-grid">
+
+
+<!-- =====================================================
+     PRE-PRIMARY
+===================================================== -->
+
+<div class="team-card"
+     data-aos="fade-up">
+
+    <div class="team-photo">
+
+        <img src="preprimary.jpg"
+             alt="Pre-Primary Section Head">
+
+        <div class="team-badge">
+
+            <i class="fas fa-child"></i>
+
+            EARLY YEARS
+
+        </div>
+
+    </div>
+
+
+    <div class="team-content">
+
+        <span class="team-section-name">
+            EARLY YEARS EDUCATION
+        </span>
+
+        <h3>
+            Pre-Primary Section
+        </h3>
+
+        <span class="team-designation">
+            SECTION HEAD / SUPERVISOR
+        </span>
+
+        <p>
+
+            Creating a warm and nurturing environment where
+            young learners develop confidence, creativity,
+            communication skills and a love for learning.
+
+        </p>
+
+        <div class="team-tags">
+
+            <span>
+                <i class="fas fa-child"></i>
+                Early Learning
+            </span>
+
+            <span>
+                <i class="fas fa-heart"></i>
+                Care & Growth
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PRIMARY
+===================================================== -->
+
+<div class="team-card"
+     data-aos="fade-up"
+     data-aos-delay="100">
+
+    <div class="team-photo">
+
+        <img src="primary.jpg"
+             alt="Primary Section Head">
+
+        <div class="team-badge">
+
+            <i class="fas fa-book-open"></i>
+
+            PRIMARY
+
+        </div>
+
+    </div>
+
+
+    <div class="team-content">
+
+        <span class="team-section-name">
+            FOUNDATION STAGE
+        </span>
+
+        <h3>
+            Primary Section
+        </h3>
+
+        <span class="team-designation">
+            SECTION HEAD / SUPERVISOR
+        </span>
+
+        <p>
+
+            Nurturing strong academic foundations, creativity,
+            discipline and confidence through meaningful
+            learning experiences.
+
+        </p>
+
+        <div class="team-tags">
+
+            <span>
+                <i class="fas fa-book"></i>
+                Classes I – V
+            </span>
+
+            <span>
+                <i class="fas fa-star"></i>
+                Foundation
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SECONDARY
+===================================================== -->
+
+<div class="team-card"
+     data-aos="fade-up">
+
+    <div class="team-photo">
+
+        <img src="secondary.jpg"
+             alt="Secondary Section Principal">
+
+        <div class="team-badge">
+
+            <i class="fas fa-award"></i>
+
+            SECONDARY
+
+        </div>
+
+    </div>
+
+
+    <div class="team-content">
+
+        <span class="team-section-name">
+            SECONDARY EDUCATION
+        </span>
+
+        <h3>
+            Secondary Section
+        </h3>
+
+        <span class="team-designation">
+            PRINCIPAL / SECTION HEAD
+        </span>
+
+        <p>
+
+            Guiding students towards academic excellence,
+            responsible citizenship, leadership and readiness
+            for higher education.
+
+        </p>
+
+        <div class="team-tags">
+
+            <span>
+                <i class="fas fa-graduation-cap"></i>
+                Classes VI – X
+            </span>
+
+            <span>
+                <i class="fas fa-star"></i>
+                Excellence
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JUNIOR COLLEGE
+===================================================== -->
+
+<div class="team-card"
+     data-aos="fade-up"
+     data-aos-delay="100">
+
+    <div class="team-photo">
+
+        <img src="junior.jpg"
+             alt="Junior College Principal">
+
+        <div class="team-badge">
+
+            <i class="fas fa-university"></i>
+
+            JUNIOR COLLEGE
+
+        </div>
+
+    </div>
+
+
+    <div class="team-content">
+
+        <span class="team-section-name">
+            HIGHER SECONDARY EDUCATION
+        </span>
+
+        <h3>
+            Junior College
+        </h3>
+
+        <span class="team-designation">
+            PRINCIPAL
+        </span>
+
+        <p>
+
+            Supporting students with academic direction,
+            career awareness and the skills required to
+            confidently pursue higher education.
+
+        </p>
+
+        <div class="team-tags">
+
+            <span>
+                <i class="fas fa-graduation-cap"></i>
+                Classes XI – XII
+            </span>
+
+            <span>
+                <i class="fas fa-compass"></i>
+                Career Guidance
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     DEGREE COLLEGE
+===================================================== -->
+
+<div class="team-card"
+     data-aos="fade-up">
+
+    <div class="team-photo">
+
+        <img src="degree.jpg"
+             alt="Degree College Principal">
+
+        <div class="team-badge">
+
+            <i class="fas fa-laptop-code"></i>
+
+            DEGREE COLLEGE
+
+        </div>
+
+    </div>
+
+
+    <div class="team-content">
+
+        <span class="team-section-name">
+            HIGHER EDUCATION
+        </span>
+
+        <h3>
+            Degree College
+        </h3>
+
+        <span class="team-designation">
+            PRINCIPAL
+        </span>
+
+        <p>
+
+            Promoting higher education through knowledge,
+            technology, professional skills, innovation
+            and industry-oriented learning.
+
+        </p>
+
+        <div class="team-tags">
+
+            <span>
+                <i class="fas fa-graduation-cap"></i>
+                Degree Programs
+            </span>
+
+            <span>
+                <i class="fas fa-microchip"></i>
+                Technology
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMINISTRATION / ACADEMIC COORDINATION
+===================================================== -->
+
+<div class="team-card"
+     data-aos="fade-up"
+     data-aos-delay="100">
+
+    <div class="team-photo">
+
+        <img src="academic-team.jpg"
+             alt="Academic Coordination Team">
+
+        <div class="team-badge">
+
+            <i class="fas fa-users"></i>
+
+            ACADEMIC TEAM
+
+        </div>
+
+    </div>
+
+
+    <div class="team-content">
+
+        <span class="team-section-name">
+            ACADEMIC & ADMINISTRATIVE SUPPORT
+        </span>
+
+        <h3>
+            Academic Coordination
+        </h3>
+
+        <span class="team-designation">
+            ACADEMIC COORDINATION TEAM
+        </span>
+
+        <p>
+
+            Working together with institutional leadership,
+            teachers and administrative teams to maintain
+            a supportive and progressive learning environment.
+
+        </p>
+
+        <div class="team-tags">
+
+            <span>
+                <i class="fas fa-users"></i>
+                Coordination
+            </span>
+
+            <span>
+                <i class="fas fa-school"></i>
+                Administration
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- SUBJECT TEACHERS SECTION -->
+<section class="subject-team" id="subject-teachers">
+  <div class="subject-container">
+
+    <div class="subject-heading">
+      <span class="subject-tag">OUR ACADEMIC TEAM</span>
+      <h2>Meet Our <span>Subject Teachers</span></h2>
+      <p>
+        Dedicated educators inspiring curiosity, confidence
+        and a lifelong love of learning.
+      </p>
+    </div>
+
+    <div class="subject-grid">
+
+      <article class="subject-card">
+        <span class="subject-number">01</span>
+        <div class="subject-icon">EN</div>
+        <h3>English</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Encouraging confident communication, creative writing
+          and strong reading habits.
+        </p>
+        <span class="subject-label">Language &amp; Communication</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">02</span>
+        <div class="subject-icon">हि</div>
+        <h3>Hindi</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Building language skills, vocabulary and appreciation
+          for Hindi literature.
+        </p>
+        <span class="subject-label">Language &amp; Literature</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">03</span>
+        <div class="subject-icon">म</div>
+        <h3>Marathi</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Helping students strengthen communication and
+          appreciate Marathi language and culture.
+        </p>
+        <span class="subject-label">Language &amp; Culture</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">04</span>
+        <div class="subject-icon">∑</div>
+        <h3>Mathematics</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Making numbers and problem-solving easier through
+          logical thinking and practical examples.
+        </p>
+        <span class="subject-label">Logic &amp; Problem Solving</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">05</span>
+        <div class="subject-icon">EVS</div>
+        <h3>Environmental Studies</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Connecting classroom learning with nature,
+          surroundings and everyday life.
+        </p>
+        <span class="subject-label">Environment &amp; Awareness</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">06</span>
+        <div class="subject-icon">⚛</div>
+        <h3>Science</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Inspiring students to ask questions, explore ideas
+          and understand the world through science.
+        </p>
+        <span class="subject-label">Discovery &amp; Exploration</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">07</span>
+        <div class="subject-icon">H</div>
+        <h3>History</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Exploring the past to understand important events,
+          cultures and historical perspectives.
+        </p>
+        <span class="subject-label">History &amp; Heritage</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">08</span>
+        <div class="subject-icon">G</div>
+        <h3>Geography</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Developing an understanding of maps, places,
+          environments and our changing world.
+        </p>
+        <span class="subject-label">Places &amp; Planet</span>
+      </article>
+
+      <article class="subject-card">
+        <span class="subject-number">09</span>
+        <div class="subject-icon">SS</div>
+        <h3>Social Studies</h3>
+        <p class="teacher-name">Teacher Name</p>
+        <p class="teacher-message">
+          Encouraging awareness of society, citizenship
+          and the world around us.
+        </p>
+        <span class="subject-label">Society &amp; Citizenship</span>
+      </article>
+
+    </div>
+
+    <div class="subject-footer">
+      <span class="footer-line"></span>
+      <p>Great educators. Meaningful learning. Brighter futures.</p>
+      <span class="footer-line"></span>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.subject-team {
+  padding: 80px 22px;
+  background: #fffaf5;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+.subject-container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.subject-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 42px;
+}
+
+.subject-tag {
+  color: #e66b16;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.subject-heading h2 {
+  color: #172b43;
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1.2;
+  margin: 14px 0;
+}
+
+.subject-heading h2 span {
+  color: #f47b20;
+}
+
+.subject-heading > p {
+  color: #737984;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.subject-card {
+  position: relative;
+  overflow: hidden;
+  padding: 27px 23px 24px;
+  background: #fff;
+  border: 1px solid #f0e2d5;
+  border-radius: 19px;
+  box-shadow: 0 8px 25px rgba(35, 38, 44, .045);
+  transition: transform .25s ease, box-shadow .25s ease,
+              border-color .25s ease;
+}
+
+.subject-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: #f47b20;
+  transition: width .3s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
+  border-color: #f5b47e;
+  box-shadow: 0 17px 38px rgba(44, 35, 27, .10);
+}
+
+.subject-card:hover::before {
+  width: 100%;
+}
+
+.subject-number {
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  color: #d9dce1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.subject-icon {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #fff0e2;
+  color: #d96512;
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.subject-card h3 {
+  color: #172b43;
+  font-size: 19px;
+  line-height: 1.4;
+  margin: 0 0 7px;
+}
+
+.teacher-name {
+  color: #e66b16;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0 0 13px;
+}
+
+.teacher-message {
+  color: #6a7079;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.subject-label {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #f6f7f9;
+  border-radius: 6px;
+  color: #545c68;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.subject-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 38px;
+  text-align: center;
+}
+
+.subject-footer p {
+  color: #7a7f87;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-line {
+  width: 35px;
+  height: 2px;
+  background: #f47b20;
+}
+
+@media (max-width: 850px) {
+  .subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .subject-team {
+    padding: 55px 16px;
+  }
+
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-card {
+    padding: 24px 21px;
+  }
+
+  .subject-heading {
+    margin-bottom: 30px;
+  }
+
+  .subject-footer {
+    gap: 9px;
+  }
+
+  .footer-line {
+    width: 18px;
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subject-card,
+  .subject-card::before {
+    transition: none;
+  }
+}
+</style>
+
+
+
+<!-- PREMIUM ADMISSION INQUIRY SECTION -->
+<section class="admission-inquiry" id="admission-inquiry">
+  <div class="admission-box">
+
+    <span class="admission-tag">YOUR FUTURE STARTS HERE</span>
+
+    <h2>Ready to Begin Your <span>Journey?</span></h2>
+
+    <p>
+      Interested in joining Global International High School
+      &amp; Junior College? Contact our school representative
+      on WhatsApp to learn about admissions, eligibility,
+      fees and the complete admission process.
+    </p>
+
+    <a class="admission-whatsapp"
+       id="admissionInquiryWhatsApp"
+       href="#"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor"
+          d="M16 3a12.8 12.8 0 0 0-11 19.3L3.3 29l6.9-1.8A12.8 12.8 0 1 0 16 3Zm0 23.3a10.4 10.4 0 0 1-5.3-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.5A10.4 10.4 0 1 1 16 26.3Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+      </svg>
+
+      <span>Enquire on WhatsApp</span>
+      <span class="admission-arrow">↗</span>
+    </a>
+
+    <div class="admission-note">
+      <span class="admission-dot"></span>
+      Direct WhatsApp admission inquiry
+    </div>
+
+  </div>
+</section>
+
+<style>
+.admission-inquiry {
+  padding: 65px 20px;
+  background: #fff8f1;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+.admission-box {
+  max-width: 850px;
+  margin: auto;
+  padding: clamp(28px, 5vw, 55px);
+  border-radius: 25px;
+  text-align: center;
+  background: linear-gradient(135deg, #182b42, #263b52);
+  color: white;
+  box-shadow: 0 20px 50px rgba(18, 37, 58, .16);
+  position: relative;
+  overflow: hidden;
+}
+
+.admission-box::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 35px solid rgba(244, 123, 32, .12);
+  border-radius: 50%;
+  top: -135px;
+  right: -65px;
+  pointer-events: none;
+}
+
+.admission-tag {
+  color: #ffb16e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.admission-box h2 {
+  font-size: clamp(27px, 4vw, 39px);
+  line-height: 1.25;
+  margin: 16px 0;
+  color: #fff;
+}
+
+.admission-box h2 span {
+  color: #ff9a43;
+}
+
+.admission-box > p {
+  max-width: 630px;
+  margin: 0 auto 28px;
+  color: #e0e6ed;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.admission-whatsapp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+  padding: 15px 23px;
+  border-radius: 40px;
+  background: #20bd66;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 9px 25px rgba(0, 0, 0, .16);
+  transition: transform .25s, background .25s;
+}
+
+.admission-whatsapp:hover {
+  background: #169c52;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.admission-whatsapp svg {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.admission-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.admission-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #d8e1e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.admission-dot {
+  width: 7px;
+  height: 7px;
+  background: #45df88;
+  border-radius: 50%;
+}
+
+@media(max-width:480px) {
+  .admission-inquiry {
+    padding: 45px 15px;
+  }
+
+  .admission-box {
+    border-radius: 19px;
+  }
+
+  .admission-whatsapp {
+    gap: 8px;
+    padding: 13px 16px;
+    font-size: 12px;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const message =
+    "Hello Sir,\n\n" +
+    "My name is [Your Name], and I am interested in taking " +
+    "admission at Global International High School & Junior College.\n\n" +
+    "Could you please guide me through the admission process " +
+    "and share the eligibility criteria, available classes, " +
+    "fee structure, required documents, admission dates, " +
+    "and any other important details?\n\n" +
+    "I would appreciate it if you could provide me with complete " +
+    "information to help me proceed with the admission process.\n\n" +
+    "Thank you for your time and guidance.\n\n" +
+    "Regards,\n[Your Name]";
+
+  const button =
+    document.getElementById("admissionInquiryWhatsApp");
+
+  if (button) {
+    button.href =
+      "https://wa.me/918976521508?text=" +
+      encodeURIComponent(message);
+  }
+})();
+</script>
+
+
+<!-- =====================================================
+     LEADERSHIP PHILOSOPHY
+===================================================== -->
+
+<section class="section philosophy">
+
+<div class="container">
+
+<div class="philosophy-content"
+     data-aos="zoom-in">
+
+    <div class="quote-icon">
+
+        <i class="fas fa-quote-left"></i>
+
+    </div>
+
+    <h2>
+
+        Leadership that inspires.
+        Education that transforms.
+
+    </h2>
+
+    <p>
+
+        Together, our leadership team works towards creating
+        an environment where every student is encouraged to
+        learn, grow, lead and achieve their full potential.
+
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+    <p>
+
+        © 2026
+        <span>Global International High School & Jr. College</span>.
+        All Rights Reserved.
+
+    </p>
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<a href="#"
+   class="back-top"
+   id="backTop">
+
+    <i class="fas fa-arrow-up"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =====================================================
+     AOS JS
+===================================================== -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js">
+</script>
+
+
+<script>
+
+/* =====================================================
+   AOS
+===================================================== */
+
+AOS.init({
+
+    duration:900,
+
+    easing:'ease-out-cubic',
+
+    once:true,
+
+    offset:80
+
+});
+
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+const backTop =
+document.getElementById("backTop");
+
+
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY > 500){
+
+        backTop.classList.add("show");
+
+    }else{
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+
+
+/* =====================================================
+   CLOSE MOBILE NAVBAR AFTER CLICK
+===================================================== */
+
+document.querySelectorAll(".nav-link").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        const navbar =
+        document.querySelector(".navbar-collapse");
+
+        if(navbar.classList.contains("show")){
+
+            new bootstrap.Collapse(navbar).hide();
+
+        }
+
+    });
+
+});
+
+
+
+/* =====================================================
+   SMOOTH INTERNAL LINKS
+===================================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click",function(e){
+
+        const target =
+        document.querySelector(
+            this.getAttribute("href")
+        );
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"start"
+
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>

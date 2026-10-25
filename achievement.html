@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Achievements | Global International High School & Jr. College</title>
+
+<meta name="description"
+content="Discover the achievements, milestones and culture of excellence at Global International High School & Jr. College.">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   GLOBAL THEME
+========================================================= */
+
+:root{
+    --burgundy:#5B0A14;
+    --burgundy-dark:#35060D;
+    --wine:#751525;
+    --gold:#C9A227;
+    --gold-light:#E6C65C;
+    --ivory:#FAF7F0;
+    --cream:#F4EEE2;
+    --white:#FFFFFF;
+    --dark:#171313;
+    --text:#292526;
+    --muted:#756D68;
+
+    --shadow:0 20px 60px rgba(45,10,15,.12);
+    --shadow-heavy:0 30px 90px rgba(35,5,10,.20);
+
+    --radius:24px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--ivory);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+    font-family:'DM Serif Display',serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+#preloader{
+    position:fixed;
+    inset:0;
+    background:var(--burgundy-dark);
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.7s ease;
+}
+
+.loader-box{
+    text-align:center;
+    color:white;
+}
+
+.loader-logo{
+    width:75px;
+    height:75px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    color:var(--gold);
+    font-weight:800;
+    font-size:22px;
+    animation:loaderPulse 1.5s infinite;
+}
+
+.loader-line{
+    width:120px;
+    height:2px;
+    background:rgba(255,255,255,.2);
+    margin:22px auto 12px;
+    overflow:hidden;
+}
+
+.loader-line span{
+    display:block;
+    width:40%;
+    height:100%;
+    background:var(--gold);
+    animation:loaderMove 1.2s infinite;
+}
+
+.loader-box small{
+    letter-spacing:3px;
+    font-size:10px;
+    opacity:.7;
+}
+
+@keyframes loaderPulse{
+    50%{transform:scale(1.08)}
+}
+
+@keyframes loaderMove{
+    0%{transform:translateX(-100%)}
+    100%{transform:translateX(300%)}
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    background:rgba(53,6,13,.94);
+    backdrop-filter:blur(18px);
+    padding:15px 0;
+    border-bottom:1px solid rgba(230,198,92,.15);
+    transition:.4s;
+}
+
+.navbar.scrolled{
+    padding:10px 0;
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
+}
+
+.logo-circle{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-light);
+    font-weight:800;
+    margin-right:12px;
+    position:relative;
+    overflow:hidden;
+}
+
+.logo-circle:after{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:20px;
+    background:rgba(255,255,255,.2);
+    transform:rotate(-35deg) translateX(-80px);
+    transition:.6s;
+}
+
+.logo-circle:hover:after{
+    transform:rotate(-35deg) translateX(80px);
+}
+
+.brand-title{
+    color:white;
+    font-weight:800;
+    letter-spacing:.5px;
+    font-size:15px;
+}
+
+.brand-subtitle{
+    color:var(--gold-light);
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.navbar-nav .nav-link{
+    color:rgba(255,255,255,.82)!important;
+    font-size:13px;
+    font-weight:600;
+    margin-left:14px;
+    position:relative;
+}
+
+.navbar-nav .nav-link:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:2px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+.navbar-nav .nav-link:hover:after{
+    width:100%;
+}
+
+.navbar-nav .nav-link:hover{
+    color:var(--gold-light)!important;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:92vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        linear-gradient(110deg,rgba(53,6,13,.97),rgba(91,10,20,.78),rgba(30,5,10,.65)),
+        url("global.jpeg") center/cover no-repeat;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    border:1px solid rgba(230,198,92,.14);
+    border-radius:50%;
+    right:-180px;
+    top:-180px;
+    animation:rotateCircle 25s linear infinite;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:50%;
+    left:-180px;
+    bottom:-200px;
+}
+
+@keyframes rotateCircle{
+    to{transform:rotate(360deg)}
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:10px 18px;
+    border:1px solid rgba(230,198,92,.5);
+    border-radius:50px;
+    color:var(--gold-light);
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    color:white;
+    font-size:clamp(52px,7vw,94px);
+    line-height:.98;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold-light);
+}
+
+.hero p{
+    max-width:680px;
+    color:rgba(255,255,255,.76);
+    font-size:17px;
+    line-height:1.9;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:var(--burgundy-dark);
+    border:none;
+    padding:14px 26px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:800;
+    transition:.35s;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+    color:var(--burgundy-dark);
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(201,162,39,.25);
+}
+
+.btn-outline-light-custom{
+    border:1px solid rgba(255,255,255,.4);
+    color:white;
+    padding:13px 25px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+    transition:.35s;
+}
+
+.btn-outline-light-custom:hover{
+    background:white;
+    color:var(--burgundy);
+    transform:translateY(-4px);
+}
+
+.hero-trophy{
+    position:absolute;
+    right:8%;
+    bottom:15%;
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-light);
+    font-size:45px;
+    border:1px solid rgba(230,198,92,.35);
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    animation:floatTrophy 4s ease-in-out infinite;
+    z-index:2;
+}
+
+@keyframes floatTrophy{
+    50%{transform:translateY(-18px) rotate(3deg)}
+}
+
+.scroll-down{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+    color:rgba(255,255,255,.6);
+    font-size:11px;
+    letter-spacing:2px;
+    text-align:center;
+}
+
+.scroll-down i{
+    display:block;
+    margin-top:8px;
+    animation:scrollArrow 1.5s infinite;
+}
+
+@keyframes scrollArrow{
+    50%{transform:translateY(7px)}
+}
+
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.section{
+    padding:110px 0;
+}
+
+.section-label{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--burgundy);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.section-label:before{
+    content:"";
+    width:28px;
+    height:2px;
+    background:var(--gold);
+}
+
+.section-title{
+    font-size:clamp(38px,5vw,60px);
+    color:var(--burgundy-dark);
+    line-height:1.05;
+}
+
+.section-text{
+    color:var(--muted);
+    line-height:1.9;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section{
+    margin-top:-70px;
+    position:relative;
+    z-index:10;
+}
+
+.stat-card{
+    height:100%;
+    background:white;
+    padding:32px 20px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(91,10,20,.06);
+    position:relative;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.stat-card:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--burgundy),var(--gold));
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-heavy);
+}
+
+.stat-icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 16px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--ivory);
+    color:var(--burgundy);
+    font-size:20px;
+}
+
+.counter{
+    color:var(--burgundy);
+    font-size:42px;
+    font-weight:800;
+    line-height:1;
+}
+
+.stat-card h5{
+    font-family:'Inter',sans-serif;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-top:10px;
+    color:var(--muted);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-image{
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:var(--shadow-heavy);
+}
+
+.intro-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    transition:1s;
+}
+
+.intro-image:hover img{
+    transform:scale(1.06);
+}
+
+.image-badge{
+    position:absolute;
+    left:25px;
+    bottom:25px;
+    background:rgba(53,6,13,.92);
+    backdrop-filter:blur(12px);
+    color:white;
+    padding:18px 22px;
+    border-radius:18px;
+    border-left:4px solid var(--gold);
+}
+
+.image-badge strong{
+    display:block;
+    color:var(--gold-light);
+    font-size:24px;
+    font-family:'DM Serif Display',serif;
+}
+
+.image-badge span{
+    font-size:11px;
+    opacity:.7;
+}
+
+/* =========================================================
+   ACHIEVEMENT CARDS
+========================================================= */
+
+.achievement-card{
+    height:100%;
+    background:white;
+    border-radius:25px;
+    padding:34px;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(91,10,20,.07);
+    box-shadow:0 15px 45px rgba(45,10,15,.07);
+    transition:.45s;
+}
+
+.achievement-card:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--burgundy),var(--gold));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.45s;
+}
+
+.achievement-card:after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:rgba(91,10,20,.035);
+    right:-50px;
+    top:-50px;
+    transition:.5s;
+}
+
+.achievement-card:hover{
+    transform:translateY(-12px);
+    box-shadow:var(--shadow-heavy);
+}
+
+.achievement-card:hover:before{
+    transform:scaleX(1);
+}
+
+.achievement-card:hover:after{
+    transform:scale(2);
+}
+
+.achievement-icon{
+    width:68px;
+    height:68px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--ivory);
+    color:var(--burgundy);
+    font-size:25px;
+    margin-bottom:25px;
+    transition:.4s;
+    position:relative;
+    z-index:2;
+}
+
+.achievement-card:hover .achievement-icon{
+    background:var(--burgundy);
+    color:var(--gold-light);
+    transform:rotate(-5deg) scale(1.08);
+}
+
+.achievement-card h3{
+    color:var(--burgundy-dark);
+    font-size:27px;
+    margin-bottom:13px;
+    position:relative;
+    z-index:2;
+}
+
+.achievement-card p{
+    color:var(--muted);
+    line-height:1.8;
+    font-size:14px;
+    position:relative;
+    z-index:2;
+}
+
+/* =========================================================
+   DARK FEATURE SECTION
+========================================================= */
+
+.excellence-section{
+    background:
+        radial-gradient(circle at 10% 20%,rgba(201,162,39,.12),transparent 25%),
+        radial-gradient(circle at 90% 80%,rgba(117,21,37,.35),transparent 30%),
+        var(--burgundy-dark);
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.excellence-section:before{
+    content:"EXCELLENCE";
+    position:absolute;
+    font-size:16vw;
+    font-weight:800;
+    color:rgba(255,255,255,.018);
+    right:-30px;
+    bottom:-30px;
+}
+
+.excellence-section .section-label{
+    color:var(--gold-light);
+}
+
+.excellence-section .section-title{
+    color:white;
+}
+
+.excellence-card{
+    padding:32px;
+    height:100%;
+    border-radius:22px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    transition:.4s;
+}
+
+.excellence-card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.09);
+    border-color:rgba(230,198,92,.35);
+}
+
+.excellence-number{
+    color:var(--gold-light);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.excellence-card h3{
+    color:white;
+    margin:14px 0;
+    font-size:27px;
+}
+
+.excellence-card p{
+    color:rgba(255,255,255,.62);
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:60px auto 0;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(var(--gold),var(--burgundy));
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:0 45px 65px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    margin-left:50%;
+}
+
+.timeline-dot{
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:var(--gold);
+    border:4px solid var(--ivory);
+    box-shadow:0 0 0 5px rgba(201,162,39,.15);
+    top:3px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+    right:-9px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-9px;
+}
+
+.timeline-year{
+    color:var(--burgundy);
+    font-weight:800;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.timeline-item h3{
+    color:var(--burgundy-dark);
+    font-size:29px;
+    margin:8px 0;
+}
+
+.timeline-item p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.value-card{
+    height:100%;
+    padding:35px 28px;
+    background:linear-gradient(145deg,#fff,#f7f0e5);
+    border-radius:25px;
+    text-align:center;
+    transition:.4s;
+    border:1px solid rgba(91,10,20,.06);
+}
+
+.value-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow);
+}
+
+.value-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--burgundy);
+    color:var(--gold-light);
+    font-size:24px;
+}
+
+.value-card h3{
+    font-size:25px;
+    color:var(--burgundy-dark);
+}
+
+.value-card p{
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* =========================================================
+   QUOTE / LEGACY
+========================================================= */
+
+.legacy{
+    background:var(--cream);
+    position:relative;
+    overflow:hidden;
+}
+
+.legacy-box{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+    padding:70px 30px;
+    position:relative;
+}
+
+.quote-icon{
+    color:var(--gold);
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.legacy h2{
+    font-size:clamp(35px,5vw,58px);
+    color:var(--burgundy-dark);
+}
+
+.legacy p{
+    max-width:760px;
+    margin:20px auto 0;
+    color:var(--muted);
+    line-height:1.9;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    padding:100px 0;
+    background:
+        linear-gradient(120deg,rgba(53,6,13,.97),rgba(91,10,20,.92)),
+        url("global.jpeg") center/cover;
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.cta-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.cta h2{
+    font-size:clamp(40px,5vw,65px);
+}
+
+.cta h2 span{
+    color:var(--gold-light);
+}
+
+.cta p{
+    color:rgba(255,255,255,.7);
+    line-height:1.8;
+    margin:20px auto 30px;
+    max-width:650px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#230409;
+    color:white;
+    padding:65px 0 25px;
+}
+
+.footer-brand{
+    font-family:'DM Serif Display',serif;
+    font-size:27px;
+    color:var(--gold-light);
+}
+
+.footer-text{
+    color:rgba(255,255,255,.55);
+    font-size:13px;
+    line-height:1.8;
+    max-width:400px;
+}
+
+.footer-title{
+    color:white;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:rgba(255,255,255,.55);
+    font-size:13px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:var(--gold-light);
+    padding-left:5px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:45px;
+    padding-top:20px;
+    color:rgba(255,255,255,.4);
+    font-size:11px;
+}
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+#backTop{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:var(--burgundy);
+    color:var(--gold-light);
+    box-shadow:0 12px 30px rgba(53,6,13,.25);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:999;
+}
+
+#backTop.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#backTop:hover{
+    transform:translateY(-5px);
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(45px);
+    transition:opacity .9s ease,transform .9s ease;
+}
+
+.reveal-left{
+    opacity:0;
+    transform:translateX(-50px);
+    transition:opacity .9s ease,transform .9s ease;
+}
+
+.reveal-right{
+    opacity:0;
+    transform:translateX(50px);
+    transition:opacity .9s ease,transform .9s ease;
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active{
+    opacity:1;
+    transform:none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:991px){
+
+    .navbar-nav{
+        padding:20px 0;
+    }
+
+    .navbar-nav .nav-link{
+        margin-left:0;
+        padding:12px 0;
+    }
+
+    .hero{
+        min-height:85vh;
+    }
+
+    .hero-trophy{
+        display:none;
+    }
+
+    .stats-section{
+        margin-top:30px;
+    }
+
+    .timeline:before{
+        left:15px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+        width:100%;
+        margin-left:0;
+        text-align:left;
+        padding-left:50px;
+        padding-right:10px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:6px;
+        right:auto;
+    }
+}
+
+@media(max-width:575px){
+
+    .section{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .intro-image img{
+        height:360px;
+    }
+
+    .achievement-card,
+    .excellence-card{
+        padding:27px;
+    }
+
+    .counter{
+        font-size:36px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *:before,
+    *:after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     PRELOADER
+======================================================= -->
+
+<div id="preloader">
+    <div class="loader-box">
+
+        <div class="loader-logo">GI</div>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+
+        <small>GLOBAL INTERNATIONAL</small>
+
+    </div>
+</div>
+
+
+<!-- =======================================================
+     NAVBAR
+======================================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+
+    <div class="logo-circle">
+        GI
+    </div>
+
+    <div>
+        <div class="brand-title">
+            GLOBAL INTERNATIONAL
+        </div>
+
+        <div class="brand-subtitle">
+            HIGH SCHOOL & JR. COLLEGE
+        </div>
+    </div>
+
+</a>
+
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#mainNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<div class="collapse navbar-collapse" id="mainNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="file.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#academics">Academics</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#facilities">Facilities</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#campus">Campus Life</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="achievement.html">Achievements</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<div class="hero-badge">
+<i class="fa-solid fa-award"></i>
+Hall of Excellence
+</div>
+
+<h1>
+Celebrating <br>
+<span>Excellence.</span>
+</h1>
+
+<p>
+Every achievement represents dedication, perseverance,
+learning and the continuous pursuit of excellence.
+At Global International, we celebrate the journey of
+our students, educators and institution as we continue
+to create meaningful milestones.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#achievements" class="btn-gold">
+Explore Achievements
+<i class="fa-solid fa-arrow-down ms-2"></i>
+</a>
+
+<a href="index.html" class="btn-outline-light-custom">
+<i class="fa-solid fa-house me-2"></i>
+Back to Home
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-trophy">
+<i class="fa-solid fa-trophy"></i>
+</div>
+
+
+<div class="scroll-down">
+SCROLL TO EXPLORE
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     STATS
+======================================================= -->
+
+<section class="stats-section">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-6 reveal">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-calendar-check"></i>
+</div>
+
+<div class="counter" data-target="15">0+</div>
+
+<h5>Years of Excellence</h5>
+
+</div>
+</div>
+
+
+<div class="col-lg-3 col-6 reveal">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-user-graduate"></i>
+</div>
+
+<div class="counter" data-target="10000">0+</div>
+
+<h5>Students</h5>
+
+</div>
+</div>
+
+
+<div class="col-lg-3 col-6 reveal">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-chalkboard-user"></i>
+</div>
+
+<div class="counter" data-target="180">0+</div>
+
+<h5>Dedicated Faculty</h5>
+
+</div>
+</div>
+
+
+<div class="col-lg-3 col-6 reveal">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-infinity"></i>
+</div>
+
+<div class="counter">∞</div>
+
+<h5>Possibilities Ahead</h5>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     INTRODUCTION
+======================================================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6 reveal-left">
+
+<div class="intro-image">
+
+<img src="global.jpeg"
+alt="Global International Campus">
+
+<div class="image-badge">
+
+<strong>Beyond Success</strong>
+
+<span>
+Building confidence, character & capability
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-6 reveal-right">
+
+<div class="section-label">
+Our Achievements
+</div>
+
+<h2 class="section-title">
+More Than Awards.<br>
+A Culture of <em>Excellence.</em>
+</h2>
+
+<p class="section-text mt-4">
+
+At Global International High School & Jr. College,
+achievement is viewed as a reflection of consistent
+effort, strong values, meaningful learning and the
+courage to aim higher.
+
+</p>
+
+<p class="section-text">
+
+From academic growth to sports, creativity,
+innovation and leadership, we encourage every learner
+to discover their strengths and transform potential
+into purposeful achievement.
+
+</p>
+
+<a href="#categories" class="btn-gold mt-3">
+Discover More
+<i class="fa-solid fa-arrow-right ms-2"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     ACHIEVEMENT CATEGORIES
+======================================================= -->
+
+<section class="section pt-0" id="achievements">
+
+<div class="container">
+
+<div class="text-center mb-5 reveal">
+
+<div class="section-label justify-content-center">
+Celebrating Every Dimension
+</div>
+
+<h2 class="section-title">
+Our Achievement Spectrum
+</h2>
+
+<p class="section-text mx-auto mt-3" style="max-width:700px;">
+Excellence takes many forms. We recognise the dedication,
+talent and growth that shape well-rounded individuals.
+</p>
+
+</div>
+
+
+<div class="row g-4">
+
+<!-- CARD 1 -->
+
+<div class="col-lg-4 col-md-6 reveal">
+
+<div class="achievement-card">
+
+<div class="achievement-icon">
+<i class="fa-solid fa-book-open"></i>
+</div>
+
+<h3>Academic Excellence</h3>
+
+<p>
+Encouraging strong academic foundations, curiosity,
+critical thinking and a lifelong commitment to learning.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="col-lg-4 col-md-6 reveal">
+
+<div class="achievement-card">
+
+<div class="achievement-icon">
+<i class="fa-solid fa-user-graduate"></i>
+</div>
+
+<h3>Student Success</h3>
+
+<p>
+Celebrating student growth, confidence, consistency
+and the determination to pursue meaningful goals.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="col-lg-4 col-md-6 reveal">
+
+<div class="achievement-card">
+
+<div class="achievement-icon">
+<i class="fa-solid fa-medal"></i>
+</div>
+
+<h3>Sports Excellence</h3>
+
+<p>
+Promoting discipline, teamwork, resilience and the
+competitive spirit through sports and physical activities.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="col-lg-4 col-md-6 reveal">
+
+<div class="achievement-card">
+
+<div class="achievement-icon">
+<i class="fa-solid fa-palette"></i>
+</div>
+
+<h3>Arts & Creativity</h3>
+
+<p>
+Providing opportunities for students to express
+imagination, creativity and individuality beyond academics.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CARD 5 -->
+
+<div class="col-lg-4 col-md-6 reveal">
+
+<div class="achievement-card">
+
+<div class="achievement-icon">
+<i class="fa-solid fa-lightbulb"></i>
+</div>
+
+<h3>Innovation</h3>
+
+<p>
+Nurturing curiosity, problem-solving and innovative
+thinking to help students approach challenges differently.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CARD 6 -->
+
+<div class="col-lg-4 col-md-6 reveal">
+
+<div class="achievement-card">
+
+<div class="achievement-icon">
+<i class="fa-solid fa-people-group"></i>
+</div>
+
+<h3>Leadership</h3>
+
+<p>
+Developing responsible young leaders through
+collaboration, initiative, communication and service.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     EXCELLENCE PHILOSOPHY
+======================================================= -->
+
+<section class="section excellence-section">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-5 reveal-left">
+
+<div class="section-label">
+The Achievement Mindset
+</div>
+
+<h2 class="section-title">
+Building Achievers.<br>
+Inspiring <span style="color:var(--gold-light);">Leaders.</span>
+</h2>
+
+<p class="mt-4"
+style="color:rgba(255,255,255,.62);line-height:1.9;">
+
+True achievement goes beyond recognition.
+It is about becoming better, learning from every
+experience and using knowledge with purpose.
+
+</p>
+
+</div>
+
+
+<div class="col-lg-7">
+
+<div class="row g-4">
+
+<div class="col-md-4 reveal">
+
+<div class="excellence-card">
+
+<div class="excellence-number">01</div>
+
+<h3>Learn</h3>
+
+<p>
+Build knowledge, curiosity and the confidence
+to ask meaningful questions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4 reveal">
+
+<div class="excellence-card">
+
+<div class="excellence-number">02</div>
+
+<h3>Grow</h3>
+
+<p>
+Develop character, resilience and the discipline
+to keep moving forward.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4 reveal">
+
+<div class="excellence-card">
+
+<div class="excellence-number">03</div>
+
+<h3>Lead</h3>
+
+<p>
+Use your abilities responsibly and inspire
+positive change around you.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     JOURNEY TIMELINE
+======================================================= -->
+
+<section class="section" id="categories">
+
+<div class="container">
+
+<div class="text-center reveal">
+
+<div class="section-label justify-content-center">
+The Journey
+</div>
+
+<h2 class="section-title">
+From Potential to Achievement
+</h2>
+
+<p class="section-text mx-auto mt-3"
+style="max-width:680px;">
+
+Every accomplishment begins with a first step.
+Our educational journey focuses on helping students
+progress with confidence at every stage.
+
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item reveal-left">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+01 — DISCOVER
+</div>
+
+<h3>Discover Potential</h3>
+
+<p>
+Students explore their interests, strengths and
+possibilities while developing curiosity and confidence.
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal-right">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+02 — DEVELOP
+</div>
+
+<h3>Develop Skills</h3>
+
+<p>
+Academic learning and co-curricular experiences help
+students strengthen practical and personal skills.
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal-left">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+03 — ACHIEVE
+</div>
+
+<h3>Achieve Excellence</h3>
+
+<p>
+Consistent effort, discipline and determination turn
+learning into meaningful accomplishments.
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal-right">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+04 — INSPIRE
+</div>
+
+<h3>Inspire Others</h3>
+
+<p>
+The ultimate achievement is using knowledge and
+success to create a positive impact on others.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     CORE VALUES
+======================================================= -->
+
+<section class="section pt-0">
+
+<div class="container">
+
+<div class="text-center mb-5 reveal">
+
+<div class="section-label justify-content-center">
+Values Behind Every Achievement
+</div>
+
+<h2 class="section-title">
+What Drives Excellence?
+</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-brain"></i>
+</div>
+
+<h3>Knowledge</h3>
+
+<p>
+Learning with curiosity, depth and purpose.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-scale-balanced"></i>
+</div>
+
+<h3>Integrity</h3>
+
+<p>
+Doing what is right with honesty and responsibility.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-handshake"></i>
+</div>
+
+<h3>Teamwork</h3>
+
+<p>
+Growing together through cooperation and respect.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 reveal">
+
+<div class="value-card">
+
+<div class="value-icon">
+<i class="fa-solid fa-bullseye"></i>
+</div>
+
+<h3>Aspiration</h3>
+
+<p>
+Aiming higher and continuously improving.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     LEGACY
+======================================================= -->
+
+<section class="legacy">
+
+<div class="container">
+
+<div class="legacy-box reveal">
+
+<div class="quote-icon">
+<i class="fa-solid fa-quote-left"></i>
+</div>
+
+<h2>
+“Excellence is not a destination.<br>
+It is a <span style="color:var(--burgundy);">habit.</span>”
+</h2>
+
+<p>
+
+Our commitment is to create an environment where
+students are encouraged to learn fearlessly, participate
+wholeheartedly, lead responsibly and celebrate every
+milestone along the way.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     CTA
+======================================================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-content reveal">
+
+<div class="section-label justify-content-center"
+style="color:var(--gold-light);">
+The Journey Continues
+</div>
+
+<h2>
+The Next <span>Achievement</span><br>
+Could Be Yours.
+</h2>
+
+<p>
+
+At Global International, every learner has the
+opportunity to discover their potential and take
+their next step towards excellence.
+
+</p>
+
+<a href="index.html#contact" class="btn-gold">
+Connect With Us
+<i class="fa-solid fa-arrow-right ms-2"></i>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="row g-5">
+
+<div class="col-lg-5">
+
+<div class="footer-brand">
+GLOBAL INTERNATIONAL
+</div>
+
+<p class="footer-text mt-3">
+
+Global International High School & Jr. College
+is committed to nurturing knowledge, character,
+confidence and excellence in every learner.
+
+</p>
+
+<p class="footer-text">
+<i class="fa-solid fa-location-dot me-2"
+style="color:var(--gold);"></i>
+Bhiwandi, Maharashtra, India
+</p>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="footer-title">
+Quick Links
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About Institution
+</a>
+</li>
+
+<li>
+<a href="achievements.html">
+Achievements
+</a>
+</li>
+
+<li>
+<a href="index.html#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-4 col-md-6">
+
+<div class="footer-title">
+Our Institution
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="principal.html">
+Principal's Message
+</a>
+</li>
+
+<li>
+<a href="management.html">
+Management's Message
+</a>
+</li>
+
+<li>
+<a href="vision.html">
+Vision & Mission
+</a>
+</li>
+
+<li>
+<a href="affiliations.html">
+Affiliations
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom text-center">
+
+© 2026 Global International High School & Jr. College.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="backTop" aria-label="Back to top">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+window.addEventListener("load",function(){
+
+    const loader=document.getElementById("preloader");
+
+    setTimeout(function(){
+
+        loader.style.opacity="0";
+        loader.style.visibility="hidden";
+
+    },600);
+
+});
+
+
+/* =========================================================
+   NAVBAR SCROLL
+========================================================= */
+
+const navbar=document.getElementById("mainNavbar");
+
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY>50){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements=document.querySelectorAll(
+    ".reveal,.reveal-left,.reveal-right"
+);
+
+const observer=new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+        entry.target.classList.add("active");
+
+        observer.unobserve(entry.target);
+
+    }
+
+});
+
+},
+
+{
+    threshold:.12
+}
+
+);
+
+revealElements.forEach(el=>observer.observe(el));
+
+
+/* =========================================================
+   ANIMATED COUNTERS
+========================================================= */
+
+const counters=document.querySelectorAll(".counter[data-target]");
+
+const counterObserver=new IntersectionObserver(
+
+(entries,observer)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+    const counter=entry.target;
+    const target=Number(counter.dataset.target);
+
+    let current=0;
+
+    const increment=Math.max(
+        1,
+        Math.ceil(target/90)
+    );
+
+    const updateCounter=()=>{
+
+        current+=increment;
+
+        if(current>=target){
+
+            counter.textContent=
+                target.toLocaleString()+"+";
+
+            return;
+
+        }
+
+        counter.textContent=
+            current.toLocaleString();
+
+        requestAnimationFrame(updateCounter);
+
+    };
+
+    updateCounter();
+
+    observer.unobserve(counter);
+
+}
+
+});
+
+},
+{
+    threshold:.7
+}
+
+);
+
+counters.forEach(counter=>counterObserver.observe(counter));
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backTop=document.getElementById("backTop");
+
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY>500){
+
+        backTop.classList.add("show");
+
+    }else{
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+backTop.addEventListener("click",function(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+
+/* =========================================================
+   STAGGERED CARD ANIMATION
+========================================================= */
+
+document.querySelectorAll(
+    ".achievement-card,.value-card,.excellence-card,.stat-card"
+).forEach((card,index)=>{
+
+    card.style.transitionDelay=
+        (index%4)*80+"ms";
+
+});
+
+
+/* =========================================================
+   CLOSE MOBILE NAVBAR AFTER CLICK
+========================================================= */
+
+document.querySelectorAll(".navbar-nav .nav-link")
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        const menu=document.getElementById("mainNav");
+
+        if(menu.classList.contains("show")){
+
+            bootstrap.Collapse
+            .getOrCreateInstance(menu)
+            .hide();
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
