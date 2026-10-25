@@ -191,7 +191,7 @@ footer{padding:42px 0 20px;background:#091426;color:white}
   <div class="heading"><span class="eyebrow">MEMORIES WORTH KEEPING</span><h2>Our Photo Gallery</h2><p>Search, explore and open your favourite photographs in the large photo viewer.</p></div>
   <div class="toolbar"><input class="search" id="searchInput" type="search" placeholder="⌕ Search photos, events or categories..." aria-label="Search gallery"><button class="reset" id="resetBtn">↻ Reset Filters</button></div>
   <div class="filters" id="filters">
-   <button class="filter active" data-category="All">✦ All Photos</button>
+   <button class="filter active" data-category="All">✦ All photos</button>
    <button class="filter" data-category="Campus">🏫 Campus</button>
    <button class="filter" data-category="Classroom">📚 Classroom</button>
    <button class="filter" data-category="Science Exhibition">🔬 Science</button>
@@ -406,17 +406,17 @@ const viewerTitle=document.getElementById("viewerTitle");
 const viewerDescription=document.getElementById("viewerDescription");
 const viewerCount=document.getElementById("viewerCount");
 const viewerStage=document.getElementById("viewerStage");
-let activeCategory="All",currentIndex=0,zoom=1,visiblePhotos=[],touchStartX=0;
+let activeCategory="All",currentIndex=0,zoom=1,visiblephotos=[],touchStartX=0;
 
 function renderGallery(){
  const query=searchInput.value.trim().toLowerCase();
- visiblePhotos=photos.map((photo,index)=>({...photo,index})).filter(photo=>
+ visiblephotos=photos.map((photo,index)=>({...photo,index})).filter(photo=>
   (activeCategory==="All"||photo.category===activeCategory)&&
   (`${photo.title} ${photo.category} ${photo.description}`).toLowerCase().includes(query)
  );
  grid.replaceChildren();
 
- visiblePhotos.forEach((photo,position)=>{
+ visiblephotos.forEach((photo,position)=>{
   const card=document.createElement("article");
   card.className="photo-card";
   card.style.animationDelay=Math.min(position*35,280)+"ms";
@@ -471,7 +471,7 @@ function renderGallery(){
   openButton.addEventListener("click",()=>openViewer(photo.index));
   grid.appendChild(card);
  });
- noResults.style.display=visiblePhotos.length?"none":"block";
+ noResults.style.display=visiblephotos.length?"none":"block";
 }
 
 function updateFilters(){
